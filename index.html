@@ -18,8 +18,8 @@
 :root{
   --bg:#FFFAF6; --rosa-claro:#FFF0F2; --cielo-claro:#EEF5FF; --oro-claro:#FFF6E3;
   --card:#FFFFFF; --ink:#2A2140; --ink-2:#5F5872; --linea:#EFE4DE;
-  --cta:#FF4D6D; --cta-2:#FF7A50; --cta-osc:#E23A5B;
-  --oro:#C98F22; --cielo:#3E8DD6; --salvia:#5E9A7C; --ok:#1F9D63; --no:#D9534F;
+  --cta:#D92D55; --cta-2:#CF3F2A; --cta-osc:#C4234A;
+  --oro:#946200; --cielo:#2D6FB8; --salvia:#5E9A7C; --ok:#167A4C; --no:#D9534F;
   --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --f-juego:"Fredoka","Nunito",system-ui,sans-serif;
   --f-script:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;
@@ -43,8 +43,8 @@ p{margin:0}
 mark{background:linear-gradient(transparent 58%,rgba(255,77,109,.22) 58%);color:inherit;padding:0 .08em}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font:800 1.02rem/1.2 var(--f-body);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .15s,box-shadow .15s,background .15s;text-align:center}
 .btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--cielo);outline-offset:3px}
-.btn-cta{background:linear-gradient(135deg,var(--cta),var(--cta-2));color:#fff;box-shadow:0 12px 26px -10px rgba(255,77,109,.6)}
-.btn-cta:hover{transform:translateY(-2px);box-shadow:0 16px 32px -10px rgba(255,77,109,.7)}
+.btn-cta{background:linear-gradient(135deg,var(--cta),var(--cta-2));color:#fff;box-shadow:0 12px 26px -10px rgba(217,45,85,.55)}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 16px 32px -10px rgba(217,45,85,.65)}
 .btn-borde{border-color:var(--ink);color:var(--ink);background:transparent}
 .btn-borde:hover{background:var(--ink);color:#fff}
 .btn svg{width:20px;height:20px;flex:none}
@@ -171,11 +171,11 @@ mark{background:linear-gradient(transparent 58%,rgba(255,77,109,.22) 58%);color:
 .mi .stepper button{width:28px;height:28px;border-radius:50%;border:1px solid var(--mi-borde);background:var(--mi-card-2);color:var(--mi-fg);font:800 1.2em var(--f-body);cursor:pointer}
 .mi .stepper b{font-size:1.6em;min-width:2ch;color:var(--mi-ac)}
 .mi .pie{font-size:.85em;opacity:.7}
-.t-boda{--mi-bg:#F7F2E8;--mi-fondo:url(img/boda-fondo.jpg);--mi-fg:#4A4033;--mi-ac:#A9823A;--mi-card:rgba(255,255,255,.8);--mi-card-2:rgba(169,130,58,.1);--mi-borde:rgba(169,130,58,.3);--mi-font:var(--f-script);--mi-num:var(--f-body)}
+.t-boda{--mi-bg:#F7F2E8;--mi-fondo:url(img/boda-fondo.webp);--mi-fg:#4A4033;--mi-ac:#A9823A;--mi-card:rgba(255,255,255,.8);--mi-card-2:rgba(169,130,58,.1);--mi-borde:rgba(169,130,58,.3);--mi-font:var(--f-script);--mi-num:var(--f-body)}
 .t-boda .tit{font-size:2em}
-.t-baby{--mi-bg:#F6EFE4;--mi-fondo:url(img/baby-fondo.jpg);--mi-fg:#5C5A4C;--mi-ac:#7D9A7A;--mi-card:rgba(255,255,255,.82);--mi-card-2:rgba(125,154,122,.12);--mi-borde:rgba(125,154,122,.35);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
-.t-rev{--mi-bg:#F4E9F3;--mi-fondo:url(img/rev-fondo.jpg);--mi-fg:#4B4466;--mi-ac:#C28A2E;--mi-card:rgba(255,255,255,.84);--mi-card-2:rgba(194,138,46,.1);--mi-borde:rgba(160,140,200,.35);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
-.t-bebe{--mi-bg:#EAF6E3;--mi-fondo:url(img/bebe-fondo.jpg);--mi-fg:#3D5130;--mi-ac:#E0762F;--mi-card:rgba(255,255,255,.86);--mi-card-2:rgba(224,118,47,.1);--mi-borde:rgba(90,140,60,.3);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
+.t-baby{--mi-bg:#F6EFE4;--mi-fondo:url(img/baby-fondo.webp);--mi-fg:#5C5A4C;--mi-ac:#7D9A7A;--mi-card:rgba(255,255,255,.82);--mi-card-2:rgba(125,154,122,.12);--mi-borde:rgba(125,154,122,.35);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
+.t-rev{--mi-bg:#F4E9F3;--mi-fondo:url(img/rev-fondo.webp);--mi-fg:#4B4466;--mi-ac:#C28A2E;--mi-card:rgba(255,255,255,.84);--mi-card-2:rgba(194,138,46,.1);--mi-borde:rgba(160,140,200,.35);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
+.t-bebe{--mi-bg:#EAF6E3;--mi-fondo:url(img/bebe-fondo.webp);--mi-fg:#3D5130;--mi-ac:#E0762F;--mi-card:rgba(255,255,255,.86);--mi-card-2:rgba(224,118,47,.1);--mi-borde:rgba(90,140,60,.3);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
 
 /* Clientes */
 .casos{display:grid;grid-template-columns:1fr 1fr;gap:22px}
@@ -202,7 +202,7 @@ mark{background:linear-gradient(transparent 58%,rgba(255,77,109,.22) 58%);color:
 .kpi{background:#F8FAFD;border:1px solid #E3EAF4;border-radius:12px;padding:10px 12px}
 .kpi small{display:block;font-size:.74rem;color:#5F6B80;font-weight:700}
 .kpi b{font-size:1.6rem;font-weight:900;font-variant-numeric:tabular-nums}
-.kpi.k-ok b{color:var(--ok)}.kpi.k-pe b{color:var(--oro)}
+.kpi.k-ok b{color:var(--ok)}.kpi.k-pe b{color:#946200}
 @media (max-width:560px){.kpis{grid-template-columns:1fr 1fr}}
 .crear{display:flex;flex-wrap:wrap;gap:8px}
 .crear input{flex:1 1 160px;min-width:0;padding:10px 12px;border-radius:10px;border:1px solid #D3DDEA;font:600 .95rem var(--f-body);background:#fff;color:#1B1E36}
@@ -310,7 +310,7 @@ tr.nuevo td{animation:brillo 1.6s ease}
 .pills{display:flex;flex-wrap:wrap;gap:8px}
 .pills label{position:relative;cursor:pointer}
 .pills input{position:absolute;opacity:0;width:1px;height:1px}
-.pills span{display:inline-block;padding:9px 15px;border-radius:999px;border:2px solid rgba(255,255,255,.22);font-weight:700;font-size:.93rem;color:#fff;transition:background .15s,border-color .15s}
+.pills span{display:inline-block;padding:11px 16px;border-radius:999px;border:2px solid rgba(255,255,255,.22);font-weight:700;font-size:.93rem;color:#fff;transition:background .15s,border-color .15s}
 .pills input:checked+span{background:#fff;color:var(--ink);border-color:#fff}
 .pills input:focus-visible+span{outline:3px solid var(--cielo);outline-offset:2px}
 .elige .btn{width:100%}
@@ -389,7 +389,7 @@ footer .logo{color:#fff;font-size:1.3rem}
       </div>
     </div>
     <div class="hero-foto">
-      <img src="img/hero-foto.jpg" alt="Mano sosteniendo un celular con una invitación digital de XV años sobre una mesa de fiesta">
+      <img src="img/hero-foto.webp" width="800" height="1000" fetchpriority="high" alt="Mano sosteniendo un celular con una invitación digital de XV años sobre una mesa de fiesta">
       <div class="chip c1"><span class="ic"><svg><use href="#i-check"/></svg></span><span><b>Familia Rojas confirmó</b><small>4 pases · hace 2 min</small></span></div>
       <div class="chip c2"><span class="ic"><svg><use href="#i-musica"/></svg></span><span><b>Con tu canción</b><small>suena al abrir</small></span></div>
       <div class="chip c3"><span class="ic"><svg><use href="#i-reloj"/></svg></span><span><b>Faltan 12 días</b><small>cuenta regresiva</small></span></div>
@@ -455,8 +455,8 @@ footer .logo{color:#fff;font-size:1.3rem}
 
     <div class="vitrina" role="tabpanel" id="pan-xv" aria-labelledby="tab-xv">
       <div class="montaje">
-        <img class="foto" src="img/sara-foto.jpg" alt="Celular con la invitación de XV años de Sara Valentina en un salón con candelabros">
-        <div class="phone"><div class="screen" data-rota><img class="on" src="img/sara-portada.jpg" alt="Portada: rosa encantada y el nombre Sara Valentina"><img src="img/sara-jardin.jpg" alt="El Jardín Encantado"><img src="img/sara-cuenta.jpg" alt="Cuenta regresiva y datos"><img src="img/sara-confirma.jpg" alt="Confirmación y libro de firmas"></div></div>
+        <img loading="lazy" decoding="async" class="foto" src="img/sara-foto.webp" alt="Celular con la invitación de XV años de Sara Valentina en un salón con candelabros">
+        <div class="phone"><div class="screen" data-rota><img loading="lazy" decoding="async" class="on" src="img/sara-portada.webp" alt="Portada: rosa encantada y el nombre Sara Valentina"><img loading="lazy" decoding="async" src="img/sara-jardin.webp" alt="El Jardín Encantado"><img loading="lazy" decoding="async" src="img/sara-cuenta.webp" alt="Cuenta regresiva y datos"><img loading="lazy" decoding="async" src="img/sara-confirma.webp" alt="Confirmación y libro de firmas"></div></div>
       </div>
       <div class="ficha">
         <span class="sello-tipo real">Cliente real</span>
@@ -473,8 +473,8 @@ footer .logo{color:#fff;font-size:1.3rem}
 
     <div class="vitrina" role="tabpanel" id="pan-heroe" aria-labelledby="tab-heroe" hidden>
       <div class="montaje">
-        <img class="foto" src="img/valen-foto.jpg" alt="Niño sosteniendo un celular con la invitación de superhéroes de Valentín">
-        <div class="phone"><div class="screen" data-rota><img class="on" src="img/valen-portada.jpg" alt="Portada estilo película: Valentín cumple 4"><img src="img/valen-mision.jpg" alt="La misión: fecha, horario y lugar"><img src="img/valen-estreno.jpg" alt="Cuenta regresiva"><img src="img/valen-felicita.jpg" alt="Felicitaciones"><img src="img/valen-final.jpg" alt="Créditos finales"></div></div>
+        <img loading="lazy" decoding="async" class="foto" src="img/valen-foto.webp" alt="Niño sosteniendo un celular con la invitación de superhéroes de Valentín">
+        <div class="phone"><div class="screen" data-rota><img loading="lazy" decoding="async" class="on" src="img/valen-portada.webp" alt="Portada estilo película: Valentín cumple 4"><img loading="lazy" decoding="async" src="img/valen-mision.webp" alt="La misión: fecha, horario y lugar"><img loading="lazy" decoding="async" src="img/valen-estreno.webp" alt="Cuenta regresiva"><img loading="lazy" decoding="async" src="img/valen-felicita.webp" alt="Felicitaciones"><img loading="lazy" decoding="async" src="img/valen-final.webp" alt="Créditos finales"></div></div>
       </div>
       <div class="ficha">
         <span class="sello-tipo real">Cliente real</span>
@@ -491,10 +491,10 @@ footer .logo{color:#fff;font-size:1.3rem}
 
     <div class="vitrina" role="tabpanel" id="pan-boda" aria-labelledby="tab-boda" hidden>
       <div class="montaje">
-        <img class="foto" src="img/boda-foto.jpg" alt="Celular con invitación de matrimonio sobre lino blanco, rosas y anillos">
+        <img loading="lazy" decoding="async" class="foto" src="img/boda-foto.webp" alt="Celular con invitación de matrimonio sobre lino blanco, rosas y anillos">
         <div class="phone"><div class="screen">
           <div class="mi t-boda" data-fecha="2027-03-20T17:00">
-            <img class="portada" src="img/boda-portada.jpg" alt="Portada: Nos casamos, Valeria y Tomás">
+            <img loading="lazy" decoding="async" class="portada" src="img/boda-portada.webp" alt="Portada: Nos casamos, Valeria y Tomás">
             <div class="cuerpo">
               <div class="bloque"><span class="lbl">Faltan</span><div class="cd"></div></div>
               <div class="bloque"><span class="tit">El gran día</span>
@@ -530,10 +530,10 @@ footer .logo{color:#fff;font-size:1.3rem}
 
     <div class="vitrina" role="tabpanel" id="pan-baby" aria-labelledby="tab-baby" hidden>
       <div class="montaje">
-        <img class="foto" src="img/baby-foto.jpg" alt="Futura mamá con un celular que muestra una invitación de baby shower">
+        <img loading="lazy" decoding="async" class="foto" src="img/baby-foto.webp" alt="Futura mamá con un celular que muestra una invitación de baby shower">
         <div class="phone"><div class="screen">
           <div class="mi t-baby" data-fecha="2026-12-12T16:00">
-            <img class="portada" src="img/baby-portada.jpg" alt="Portada: Baby shower de Martina">
+            <img loading="lazy" decoding="async" class="portada" src="img/baby-portada.webp" alt="Portada: Baby shower de Martina">
             <div class="cuerpo">
               <div class="bloque"><span class="lbl">Faltan para celebrar</span><div class="cd"></div></div>
               <div class="bloque"><span class="tit">Te esperamos</span>
@@ -567,10 +567,10 @@ footer .logo{color:#fff;font-size:1.3rem}
 
     <div class="vitrina" role="tabpanel" id="pan-rev" aria-labelledby="tab-rev" hidden>
       <div class="montaje">
-        <img class="foto" src="img/rev-foto.jpg" alt="Pareja con un celular que muestra una invitación de revelación de sexo">
+        <img loading="lazy" decoding="async" class="foto" src="img/rev-foto.webp" alt="Pareja con un celular que muestra una invitación de revelación de sexo">
         <div class="phone"><div class="screen">
           <div class="mi t-rev" data-fecha="2026-12-05T17:00">
-            <img class="portada" src="img/rev-portada.jpg" alt="Portada: ¿Niño o niña? Camila y Diego">
+            <img loading="lazy" decoding="async" class="portada" src="img/rev-portada.webp" alt="Portada: ¿Niño o niña? Camila y Diego">
             <div class="cuerpo">
               <div class="bloque"><span class="lbl">La gran revelación en</span><div class="cd"></div></div>
               <div class="bloque" data-voto><span class="tit">¿Cuál es tu apuesta?</span>
@@ -607,10 +607,10 @@ footer .logo{color:#fff;font-size:1.3rem}
 
     <div class="vitrina" role="tabpanel" id="pan-bebe" aria-labelledby="tab-bebe" hidden>
       <div class="montaje">
-        <img class="foto" src="img/bebe-foto.jpg" alt="Celular con invitación de primer cumpleaños de animalitos sobre una mesa con cupcakes">
+        <img loading="lazy" decoding="async" class="foto" src="img/bebe-foto.webp" alt="Celular con invitación de primer cumpleaños de animalitos sobre una mesa con cupcakes">
         <div class="phone"><div class="screen">
           <div class="mi t-bebe" data-fecha="2027-01-09T15:00">
-            <img class="portada" src="img/bebe-portada.jpg" alt="Portada: Mi primer añito, Emilia cumple 1">
+            <img loading="lazy" decoding="async" class="portada" src="img/bebe-portada.webp" alt="Portada: Mi primer añito, Emilia cumple 1">
             <div class="cuerpo">
               <div class="bloque"><span class="lbl">La fiesta empieza en</span><div class="cd"></div></div>
               <div class="bloque"><span class="tit">¡Ven a jugar!</span>
@@ -652,7 +652,7 @@ footer .logo{color:#fff;font-size:1.3rem}
     </div>
     <div class="casos">
       <article class="caso">
-        <img src="img/sara-foto.jpg" alt="">
+        <img loading="lazy" decoding="async" src="img/sara-foto.webp" alt="">
         <div class="txt">
           <h3>XV años de Sara Valentina</h3>
           <p>Querían algo elegante y saber exactamente quién asistía.</p>
@@ -660,7 +660,7 @@ footer .logo{color:#fff;font-size:1.3rem}
         </div>
       </article>
       <article class="caso">
-        <img src="img/valen-foto.jpg" alt="">
+        <img loading="lazy" decoding="async" src="img/valen-foto.webp" alt="">
         <div class="txt">
           <h3>Cumpleaños 4 de Valentín</h3>
           <p>Querían que los invitados sintieran que llegaban a una película.</p>
@@ -924,10 +924,17 @@ document.querySelectorAll('input[name="ev"],input[name="pl"]').forEach(i => i.ad
 armaFinal();
 
 /* Pantallas que rotan (ejemplos reales) */
+/* Se detienen con "reducir movimiento", con la pestaña oculta o fuera de pantalla */
+const calma = matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('[data-rota]').forEach((scr, n) => {
+  if (calma) return;
   const imgs = [...scr.querySelectorAll(':scope > img')];
-  let i = 0;
-  setInterval(() => { imgs[i].classList.remove('on'); i = (i + 1) % imgs.length; imgs[i].classList.add('on'); }, 3000 + n * 350);
+  let i = 0, visible = true;
+  if ('IntersectionObserver' in window) new IntersectionObserver(e => visible = e[0].isIntersecting).observe(scr);
+  setInterval(() => {
+    if (document.hidden || !visible || !scr.offsetParent) return;
+    imgs[i].classList.remove('on'); i = (i + 1) % imgs.length; imgs[i].classList.add('on');
+  }, 3000 + n * 350);
 });
 
 /* Pestañas */
