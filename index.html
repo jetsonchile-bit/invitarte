@@ -8,382 +8,327 @@
 <meta name="description" content="Invitaciones digitales para XV años, bodas, baby shower, revelación de sexo y cumpleaños: música, cuenta regresiva, confirmación de asistencia, galería de fotos y panel de invitados.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Pinyon+Script&family=Fredoka:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka:wght@500;600;700&family=Pinyon+Script&display=swap">
 <meta property="og:title" content="Invitarte · Invitaciones web que enamoran">
 <meta property="og:description" content="XV años, bodas, baby shower, revelación y cumpleaños. Tus invitados confirman con un toque. Desde USD 80.">
 <meta property="og:image" content="https://jetsonchile-bit.github.io/invitarte/img/hero-foto.jpg">
 <meta property="og:type" content="website">
 <style>
-/* Layout: "noche de gala" en tinta índigo con detalles champán; la oferta y los planes son tarjetas de papel marfil, como una invitación impresa. */
+/* Layout: página clara y cálida de fiesta; un solo color de acción (coral rosado) para todos los botones, con bandas suaves rosa, cielo y oro tomadas de los ejemplos. */
 :root{
-  --noche:#0F1229; --noche-2:#161A37; --tinta:#1F2446; --linea:#2E3460;
-  --champan:#E7C47F; --champan-2:#B88F3E; --marfil:#F6EFE3; --bruma:#A8ADCB; --rosa:#EBA29E;
-  --papel:#F5EDDF; --papel-2:#EADFCB; --tinta-osc:#191C37; --tinta-suave:#5A5D78;
-  --ok:#7FD1A6;
-  --f-display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
-  --f-body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --bg:#FFFAF6; --rosa-claro:#FFF0F2; --cielo-claro:#EEF5FF; --oro-claro:#FFF6E3;
+  --card:#FFFFFF; --ink:#2A2140; --ink-2:#5F5872; --linea:#EFE4DE;
+  --cta:#FF4D6D; --cta-2:#FF7A50; --cta-osc:#E23A5B;
+  --oro:#C98F22; --cielo:#3E8DD6; --salvia:#5E9A7C; --ok:#1F9D63; --no:#D9534F;
+  --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-juego:"Fredoka","Nunito",system-ui,sans-serif;
   --f-script:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;
-  --f-juego:"Fredoka","Hanken Grotesk",system-ui,sans-serif;
-  --r:18px;
-  color-scheme:dark;
+  --r:20px;
+  color-scheme:light;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth}
-body{background:var(--noche);color:var(--marfil);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:18px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--f-body);font-weight:900;line-height:1.15;margin:0;text-wrap:balance;letter-spacing:-.015em}
 p{margin:0}
-.w{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--champan)}
-.lead{color:var(--bruma);font-size:1.12rem;max-width:60ch}
-.sec{padding-block:clamp(72px,10vw,120px)}
-.sec-head{display:grid;gap:16px;max-width:780px;margin-bottom:clamp(36px,5vw,56px)}
+.w{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--cta-osc)}
+.lead{color:var(--ink-2);font-size:1.12rem;max-width:58ch}
+.sec{padding-block:clamp(64px,9vw,104px)}
+.sec-head{display:grid;gap:14px;max-width:760px;margin-bottom:clamp(32px,4vw,48px)}
 .sec-head.centro{margin-inline:auto;text-align:center;justify-items:center}
-.sec-head h2,.h2{font-size:clamp(2.1rem,4.6vw,3.6rem)}
-.sec-head h2 em,.h2 em{font-style:italic;color:var(--champan)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font:700 1rem/1.15 var(--f-body);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .2s,box-shadow .2s,background .2s;text-align:center}
-.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--champan);outline-offset:3px}
-.btn-oro{background:linear-gradient(180deg,#F3D79C,var(--champan) 45%,var(--champan-2));color:#1A1430;box-shadow:0 10px 30px -10px rgba(231,196,127,.55)}
-.btn-oro:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(231,196,127,.7)}
-.btn-linea{border-color:var(--linea);color:var(--marfil);background:transparent}
-.btn-linea:hover{border-color:var(--champan);color:var(--champan)}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-grande{padding:20px 34px;font-size:1.08rem}
-.bajo-cta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.86rem;color:var(--bruma)}
-.bajo-cta span{display:inline-flex;align-items:center;gap:6px}
-.bajo-cta svg{width:15px;height:15px;color:var(--ok)}
+.sec-head h2,.h2{font-size:clamp(1.9rem,4.2vw,3rem)}
+mark{background:linear-gradient(transparent 58%,rgba(255,77,109,.22) 58%);color:inherit;padding:0 .08em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font:800 1.02rem/1.2 var(--f-body);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .15s,box-shadow .15s,background .15s;text-align:center}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--cielo);outline-offset:3px}
+.btn-cta{background:linear-gradient(135deg,var(--cta),var(--cta-2));color:#fff;box-shadow:0 12px 26px -10px rgba(255,77,109,.6)}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 16px 32px -10px rgba(255,77,109,.7)}
+.btn-borde{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-borde:hover{background:var(--ink);color:#fff}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-grande{padding:19px 34px;font-size:1.1rem}
+.ticks{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.92rem;color:var(--ink-2);font-weight:600}
+.ticks span{display:inline-flex;align-items:center;gap:6px}
+.ticks svg{width:18px;height:18px;color:var(--ok)}
 
-/* Aviso superior */
-.aviso{background:linear-gradient(90deg,#2A2150,#3B2B55,#2A2150);color:var(--marfil);font-size:.84rem;text-align:center}
-.aviso .w{padding-block:9px}
-.aviso b{color:var(--champan)}
-
-/* Encabezado */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(15,18,41,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(46,52,96,.6)}
-.top .w{display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px}
-.logo{display:flex;align-items:baseline;text-decoration:none;font-family:var(--f-script);font-size:2rem;color:var(--champan);line-height:1}
-.logo small{font-family:var(--f-body);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--bruma);margin-left:10px}
-.nav{display:flex;align-items:center;gap:26px}
-.nav a.l{text-decoration:none;color:var(--bruma);font-size:.95rem}
-.nav a.l:hover{color:var(--marfil)}
-.nav .btn{padding:11px 18px;font-size:.92rem}
-@media (max-width:860px){.nav a.l{display:none}.logo small{display:none}}
+/* Aviso y encabezado */
+.aviso{background:var(--ink);color:#fff;font-size:.86rem;text-align:center;font-weight:600}
+.aviso .w{padding-block:8px}
+.aviso b{color:#FFD08A}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(255,250,246,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+.top .w{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{text-decoration:none;font-family:var(--f-juego);font-weight:700;font-size:1.6rem;color:var(--ink);letter-spacing:-.01em}
+.logo span{color:var(--cta)}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a.l{text-decoration:none;color:var(--ink-2);font-weight:700;font-size:.95rem}
+.nav a.l:hover{color:var(--cta-osc)}
+.nav .btn{padding:10px 18px;font-size:.92rem}
+@media (max-width:860px){.nav a.l{display:none}}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;padding-block:clamp(40px,6vw,84px) clamp(56px,7vw,96px)}
-.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:780px;height:780px;max-width:120vw;background:radial-gradient(closest-side,rgba(231,196,127,.15),transparent 70%);pointer-events:none}
-#chispas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.8}
-.hero .w{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,5vw,64px);align-items:center}
-.hero-txt{display:grid;gap:24px;min-width:0}
-.hero h1{font-size:clamp(2.6rem,5.8vw,4.9rem);font-weight:500}
-.hero h1 .script{font-family:var(--f-script);font-weight:400;font-size:1.2em;color:var(--champan);letter-spacing:0;line-height:.9}
-.hero .lead{font-size:1.16rem}
+.hero{position:relative;overflow:hidden;padding-block:clamp(36px,6vw,80px) clamp(48px,6vw,80px)}
+.hero::before{content:"";position:absolute;top:-180px;right:-160px;width:620px;height:620px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,122,80,.18),transparent);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-220px;left:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(closest-side,rgba(62,141,214,.14),transparent);pointer-events:none}
+.hero .w{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center}
+.hero-txt{display:grid;gap:22px;min-width:0}
+.hero h1{font-size:clamp(2.3rem,5.2vw,4rem)}
+.hero .lead{font-size:1.18rem}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.hero-foto{position:relative;min-width:0;max-width:520px;justify-self:center;width:100%}
-.hero-foto>img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;box-shadow:0 50px 100px -40px rgba(0,0,0,.9),0 0 0 1px rgba(231,196,127,.25)}
-.chip{position:absolute;z-index:5;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:rgba(22,26,55,.93);border:1px solid var(--linea);box-shadow:0 18px 40px -18px rgba(0,0,0,.8);font-size:.85rem;line-height:1.25;white-space:nowrap;animation:flota 6s ease-in-out infinite}
-.chip b{display:block;font-size:.95rem;color:var(--marfil)}
-.chip small{color:var(--bruma)}
-.chip .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none;background:rgba(231,196,127,.14);color:var(--champan)}
+.hero-foto{position:relative;min-width:0;max-width:500px;justify-self:center;width:100%}
+.hero-foto>img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;box-shadow:0 40px 80px -36px rgba(42,33,64,.55)}
+.chip{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:16px;background:#fff;box-shadow:0 14px 34px -14px rgba(42,33,64,.4);font-size:.85rem;line-height:1.25;white-space:nowrap;animation:flota 6s ease-in-out infinite}
+.chip b{display:block;font-size:.95rem;font-weight:800}
+.chip small{color:var(--ink-2)}
+.chip .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none}
 .chip .ic svg{width:18px;height:18px}
-.chip.c1{top:7%;left:-6%}
-.chip.c1 .ic{background:rgba(127,209,166,.14);color:var(--ok)}
-.chip.c2{top:46%;right:-5%;animation-delay:-2s}
-.chip.c3{bottom:6%;left:-4%;animation-delay:-4s}
-@keyframes flota{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@media (max-width:920px){.hero .w{grid-template-columns:1fr}.chip.c1{left:0}.chip.c2{right:0}.chip.c3{left:0}}
+.chip.c1{top:7%;left:-5%}.chip.c1 .ic{background:#E3F6EC;color:var(--ok)}
+.chip.c2{top:46%;right:-5%;animation-delay:-2s}.chip.c2 .ic{background:var(--rosa-claro);color:var(--cta)}
+.chip.c3{bottom:6%;left:-3%;animation-delay:-4s}.chip.c3 .ic{background:var(--cielo-claro);color:var(--cielo)}
+@keyframes flota{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media (max-width:920px){.hero .w{grid-template-columns:1fr}.chip.c1,.chip.c3{left:0}.chip.c2{right:0}}
 @media (max-width:480px){.chip{font-size:.76rem;padding:8px 10px}.chip b{font-size:.84rem}.chip .ic{width:28px;height:28px}}
 
-/* Tira de tipos de evento */
-.tipos{border-block:1px solid var(--linea);background:var(--noche-2)}
-.tipos .w{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px;padding-block:20px;font-family:var(--f-display);font-style:italic;font-size:1.12rem;color:var(--bruma)}
-.tipos a{text-decoration:none}
-.tipos a:hover{color:var(--champan)}
-.tipos i{color:var(--champan-2);font-style:normal}
+/* Franja de confianza */
+.confianza{background:var(--card);border-block:1px solid var(--linea)}
+.confianza .w{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-block:24px}
+.confianza div{display:flex;gap:12px;align-items:center;min-width:0}
+.confianza .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;flex:none}
+.confianza .ic svg{width:22px;height:22px}
+.confianza b{display:block;font-size:1rem;line-height:1.25}
+.confianza small{color:var(--ink-2);font-size:.86rem;line-height:1.35;display:block}
+@media (max-width:900px){.confianza .w{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.confianza .w{grid-template-columns:1fr}}
 
 /* Problema vs solución */
 .vs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.vs-col{border-radius:var(--r);padding:clamp(24px,3vw,36px);display:grid;gap:18px;align-content:start;min-width:0}
-.vs-col h3{font-size:1.5rem}
-.vs-antes{border:1px dashed var(--linea);color:var(--bruma)}
-.vs-antes h3{color:var(--bruma);font-style:italic}
-.vs-despues{background:linear-gradient(160deg,var(--tinta),var(--noche-2));border:1px solid rgba(231,196,127,.35)}
-.vs-despues h3{color:var(--champan)}
-.lista{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.lista li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start}
-.lista li svg{width:20px;height:20px;margin-top:3px}
-.vs-antes li svg{color:var(--rosa)}
-.vs-despues li svg,.lista.oro li svg{color:var(--champan)}
-.vs-despues li{color:var(--marfil)}
+.vs-col{border-radius:var(--r);padding:clamp(22px,3vw,32px);display:grid;gap:16px;align-content:start;min-width:0}
+.vs-col h3{font-size:1.3rem}
+.vs-antes{background:#F6F2F0;color:var(--ink-2)}
+.vs-despues{background:var(--card);box-shadow:0 20px 50px -30px rgba(42,33,64,.35);border:2px solid var(--cta)}
+.lista{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.lista li{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start}
+.lista li svg{width:22px;height:22px;margin-top:2px}
+.vs-antes li svg{color:var(--no)}
+.vs-despues li svg,.lista.si li svg{color:var(--ok)}
 @media (max-width:760px){.vs{grid-template-columns:1fr}}
 
-/* Ecuación de valor */
-.ecuacion{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linea);border:1px solid var(--linea);border-radius:var(--r);overflow:hidden}
-.ecuacion div{background:var(--noche);padding:30px 26px;display:grid;gap:10px;align-content:start;min-width:0}
-.ecuacion small{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--champan-2)}
-.ecuacion h3{font-size:1.45rem}
-.ecuacion p{color:var(--bruma);font-size:.97rem}
-@media (max-width:900px){.ecuacion{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.ecuacion{grid-template-columns:1fr}}
-
-/* Galería por tipo de evento */
-.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:32px;scrollbar-width:thin}
-.tab{flex:none;display:grid;gap:2px;text-align:left;padding:12px 18px;border-radius:14px;border:1px solid var(--linea);background:transparent;color:var(--bruma);font:600 .95rem var(--f-body);cursor:pointer;transition:border-color .2s,background .2s,color .2s}
-.tab small{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--champan-2)}
-.tab[aria-selected="true"]{border-color:var(--champan);background:rgba(231,196,127,.1);color:var(--marfil)}
-.tab:hover{color:var(--marfil)}
-.vitrina{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center}
-.montaje{position:relative;padding-right:min(120px,16%);padding-bottom:40px;min-width:0}
-.montaje .foto{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;box-shadow:0 40px 80px -40px rgba(0,0,0,.9)}
-.montaje .phone{position:absolute;right:0;bottom:0;width:min(230px,46%)}
-.ficha{display:grid;gap:18px;min-width:0}
-.sello-tipo{justify-self:start;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
-.sello-tipo.real{background:rgba(127,209,166,.14);color:var(--ok)}
-.sello-tipo.muestra{background:rgba(231,196,127,.13);color:var(--champan)}
-.ficha h3{font-size:clamp(1.9rem,3.4vw,2.7rem)}
-.ficha .tipo-script{font-family:var(--f-script);font-size:2.1rem;color:var(--champan);line-height:1}
-.ficha p{color:var(--bruma)}
-.ficha .lista{gap:10px;font-size:.98rem}
-.ficha .acciones{display:flex;flex-wrap:wrap;gap:10px;padding-top:6px}
-.pista{font-size:.84rem;color:var(--bruma);display:flex;align-items:center;gap:8px}
-.pista svg{width:16px;height:16px;color:var(--champan)}
+/* Galería por tipo */
+.band-rosa{background:var(--rosa-claro)}
+.band-cielo{background:var(--cielo-claro)}
+.band-oro{background:var(--oro-claro)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin-bottom:28px;scrollbar-width:thin}
+.tab{flex:none;padding:11px 18px;border-radius:999px;border:2px solid var(--linea);background:#fff;color:var(--ink);font:800 .95rem var(--f-body);cursor:pointer;display:flex;align-items:center;gap:8px}
+.tab i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.tab[aria-selected="true"]{border-color:var(--ink);background:var(--ink);color:#fff}
+.vitrina{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,60px);align-items:center}
+.montaje{position:relative;padding-right:min(110px,15%);padding-bottom:36px;min-width:0}
+.montaje .foto{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;box-shadow:0 30px 60px -34px rgba(42,33,64,.5)}
+.montaje .phone{position:absolute;right:0;bottom:0;width:min(225px,46%)}
+.ficha{display:grid;gap:16px;min-width:0}
+.sello-tipo{justify-self:start;font-size:.78rem;font-weight:800;padding:5px 12px;border-radius:999px}
+.sello-tipo.real{background:#E3F6EC;color:#14724A}
+.sello-tipo.muestra{background:#FFF1D6;color:#8A5A0B}
+.ficha h3{font-size:clamp(1.6rem,3vw,2.2rem)}
+.ficha p{color:var(--ink-2)}
+.ficha .acciones{display:flex;flex-wrap:wrap;gap:10px;padding-top:4px}
+.pista{font-size:.9rem;color:var(--ink-2);display:flex;align-items:center;gap:8px;font-weight:600}
+.pista svg{width:18px;height:18px;color:var(--cta)}
 @media (max-width:880px){.vitrina{grid-template-columns:1fr}}
 
 /* Teléfono */
-.phone{position:relative;width:min(270px,62vw);aspect-ratio:9/19.3;border-radius:42px;padding:10px;background:linear-gradient(145deg,#3A3F66,#14172F 40%,#2B2F52);box-shadow:0 0 0 1.5px #4A5080 inset,0 40px 80px -30px rgba(0,0,0,.85),0 0 0 1px rgba(0,0,0,.6);max-width:100%}
-.phone::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:30%;height:20px;background:#05060F;border-radius:20px;z-index:3;pointer-events:none}
-.screen{position:relative;width:100%;height:100%;border-radius:33px;overflow:hidden;background:#05060F}
+.phone{position:relative;width:min(270px,62vw);aspect-ratio:9/19.3;border-radius:42px;padding:10px;background:linear-gradient(145deg,#3a3550,#1b1726 45%,#3a3550);box-shadow:0 30px 60px -26px rgba(42,33,64,.7);max-width:100%}
+.phone::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:30%;height:20px;background:#0b0910;border-radius:20px;z-index:3;pointer-events:none}
+.screen{position:relative;width:100%;height:100%;border-radius:33px;overflow:hidden;background:#0b0910}
 .screen>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;opacity:0;transition:opacity .9s ease}
 .screen>img.on{opacity:1}
 
-/* Mini invitaciones vivas (dentro del teléfono) */
-.mi{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;font-size:11.5px;line-height:1.45;color:var(--mi-fg);background:var(--mi-bg)}
+/* Mini invitaciones vivas */
+.mi{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;font-family:var(--f-body);font-size:11.5px;line-height:1.45;color:var(--mi-fg);background:var(--mi-bg)}
 .mi::-webkit-scrollbar{display:none}
 .mi img.portada{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
 .mi .cuerpo{background:var(--mi-bg) var(--mi-fondo) center top/100% auto repeat-y;padding:18px 14px 26px;display:grid;gap:12px;text-align:center}
 .mi .bloque{background:var(--mi-card);border:1px solid var(--mi-borde);border-radius:14px;padding:12px;display:grid;gap:6px}
 .mi .tit{font-family:var(--mi-font);font-size:1.5em;color:var(--mi-ac);line-height:1.1}
-.mi .lbl{font-size:.78em;letter-spacing:.16em;text-transform:uppercase;opacity:.75;font-weight:700}
+.mi .lbl{font-size:.78em;letter-spacing:.12em;text-transform:uppercase;opacity:.75;font-weight:800}
 .mi .cd{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
 .mi .cd span{background:var(--mi-card-2);border-radius:9px;padding:6px 0;display:grid;font-size:.72em;font-variant-numeric:tabular-nums}
 .mi .cd b{font-size:1.7em;line-height:1.1;color:var(--mi-ac);font-family:var(--mi-num)}
 .mi .fila{display:flex;justify-content:space-between;gap:8px;text-align:left;border-bottom:1px dashed var(--mi-borde);padding:4px 0}
 .mi .fila:last-child{border-bottom:0}
-.mi .fila b{font-weight:700;text-align:right}
+.mi .fila b{font-weight:800;text-align:right}
 .mi .bts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.mi button.mb{border:0;border-radius:999px;padding:8px 6px;font:700 .92em var(--f-body);cursor:pointer;background:var(--mi-ac);color:var(--mi-btn-fg)}
+.mi button.mb{border:0;border-radius:999px;padding:8px 6px;font:800 .92em var(--f-body);cursor:pointer;background:var(--mi-ac);color:#fff}
 .mi button.mb.sec2{background:transparent;color:var(--mi-fg);border:1px solid var(--mi-borde)}
-.mi button.mb.hecho{background:#5DBB8A;color:#fff}
-.mi .gracias{font-weight:700;color:var(--mi-ac)}
+.mi button.mb.hecho{background:#3FAE77}
+.mi .gracias{font-weight:800;color:var(--mi-ac)}
 .mi .barras{display:grid;gap:5px;text-align:left}
 .mi .barra{position:relative;height:22px;border-radius:999px;background:var(--mi-card-2);overflow:hidden}
 .mi .barra i{position:absolute;inset:0 auto 0 0;border-radius:999px;transition:width .6s}
-.mi .barra span{position:relative;display:flex;justify-content:space-between;padding:0 10px;line-height:22px;font-weight:700;font-size:.9em}
+.mi .barra span{position:relative;display:flex;justify-content:space-between;padding:0 10px;line-height:22px;font-weight:800;font-size:.9em}
 .mi .stepper{display:flex;justify-content:center;align-items:center;gap:12px}
-.mi .stepper button{width:28px;height:28px;border-radius:50%;border:1px solid var(--mi-borde);background:var(--mi-card-2);color:var(--mi-fg);font:700 1.2em var(--f-body);cursor:pointer}
+.mi .stepper button{width:28px;height:28px;border-radius:50%;border:1px solid var(--mi-borde);background:var(--mi-card-2);color:var(--mi-fg);font:800 1.2em var(--f-body);cursor:pointer}
 .mi .stepper b{font-size:1.6em;min-width:2ch;color:var(--mi-ac)}
 .mi .pie{font-size:.85em;opacity:.7}
-.t-boda{--mi-bg:#F7F2E8;--mi-fondo:url(img/boda-fondo.jpg);--mi-fg:#4A4033;--mi-ac:#A9823A;--mi-btn-fg:#fff;--mi-card:rgba(255,255,255,.78);--mi-card-2:rgba(169,130,58,.1);--mi-borde:rgba(169,130,58,.3);--mi-font:var(--f-script);--mi-num:var(--f-display)}
+.t-boda{--mi-bg:#F7F2E8;--mi-fondo:url(img/boda-fondo.jpg);--mi-fg:#4A4033;--mi-ac:#A9823A;--mi-card:rgba(255,255,255,.8);--mi-card-2:rgba(169,130,58,.1);--mi-borde:rgba(169,130,58,.3);--mi-font:var(--f-script);--mi-num:var(--f-body)}
 .t-boda .tit{font-size:2em}
-.t-baby{--mi-bg:#F6EFE4;--mi-fondo:url(img/baby-fondo.jpg);--mi-fg:#5C5A4C;--mi-ac:#7D9A7A;--mi-btn-fg:#fff;--mi-card:rgba(255,255,255,.8);--mi-card-2:rgba(125,154,122,.12);--mi-borde:rgba(125,154,122,.35);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
-.t-rev{--mi-bg:#F4E9F3;--mi-fondo:url(img/rev-fondo.jpg);--mi-fg:#4B4466;--mi-ac:#C28A2E;--mi-btn-fg:#fff;--mi-card:rgba(255,255,255,.82);--mi-card-2:rgba(194,138,46,.1);--mi-borde:rgba(160,140,200,.35);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
-.t-bebe{--mi-bg:#EAF6E3;--mi-fondo:url(img/bebe-fondo.jpg);--mi-fg:#3D5130;--mi-ac:#E0762F;--mi-btn-fg:#fff;--mi-card:rgba(255,255,255,.85);--mi-card-2:rgba(224,118,47,.1);--mi-borde:rgba(90,140,60,.3);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
+.t-baby{--mi-bg:#F6EFE4;--mi-fondo:url(img/baby-fondo.jpg);--mi-fg:#5C5A4C;--mi-ac:#7D9A7A;--mi-card:rgba(255,255,255,.82);--mi-card-2:rgba(125,154,122,.12);--mi-borde:rgba(125,154,122,.35);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
+.t-rev{--mi-bg:#F4E9F3;--mi-fondo:url(img/rev-fondo.jpg);--mi-fg:#4B4466;--mi-ac:#C28A2E;--mi-card:rgba(255,255,255,.84);--mi-card-2:rgba(194,138,46,.1);--mi-borde:rgba(160,140,200,.35);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
+.t-bebe{--mi-bg:#EAF6E3;--mi-fondo:url(img/bebe-fondo.jpg);--mi-fg:#3D5130;--mi-ac:#E0762F;--mi-card:rgba(255,255,255,.86);--mi-card-2:rgba(224,118,47,.1);--mi-borde:rgba(90,140,60,.3);--mi-font:var(--f-juego);--mi-num:var(--f-juego)}
 
-/* Casos reales */
-.casos{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.caso{border:1px solid var(--linea);border-radius:24px;overflow:hidden;background:var(--noche-2);display:grid;grid-template-rows:auto 1fr;min-width:0}
-.caso>img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%}
-.caso .txt{padding:clamp(22px,3vw,32px);display:grid;gap:16px;align-content:start}
-.caso h3{font-size:1.75rem}
-.cifras{display:flex;flex-wrap:wrap;gap:12px 32px;padding-top:16px;border-top:1px solid var(--linea)}
+/* Clientes */
+.casos{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.caso{background:var(--card);border-radius:24px;overflow:hidden;box-shadow:0 20px 50px -34px rgba(42,33,64,.4);display:grid;grid-template-rows:auto 1fr;min-width:0}
+.caso>img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 30%}
+.caso .txt{padding:clamp(20px,3vw,28px);display:grid;gap:14px;align-content:start}
+.caso h3{font-size:1.4rem}
+.caso p{color:var(--ink-2)}
+.cifras{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:14px;border-top:1px solid var(--linea)}
 .cifras div{display:grid}
-.cifras b{font-family:var(--f-display);font-size:2.2rem;font-weight:500;color:var(--champan);line-height:1.1;font-variant-numeric:tabular-nums}
-.cifras small{color:var(--bruma);font-size:.86rem}
-.caso dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:.95rem}
-.caso dt{color:var(--champan);font-weight:600}
-.caso dd{margin:0;color:var(--bruma)}
+.cifras b{font-size:2rem;font-weight:900;color:var(--cta-osc);line-height:1.1;font-variant-numeric:tabular-nums}
+.cifras small{color:var(--ink-2);font-size:.86rem}
 @media (max-width:860px){.casos{grid-template-columns:1fr}}
 
-/* Panel de invitados (demo) */
-.panel-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:center}
-.ventana{border-radius:16px;background:#F7F4EE;color:#1B1E36;box-shadow:0 50px 100px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08);overflow:hidden;min-width:0}
-.ventana .barra{display:flex;align-items:center;gap:7px;padding:12px 14px;background:#E9E4DA;border-bottom:1px solid #DDD6C8}
-.ventana .barra i{width:11px;height:11px;border-radius:50%;background:#D4CBBB}
-.ventana .barra span{margin-left:10px;font-size:.78rem;color:#6B6880;background:#F7F4EE;padding:4px 12px;border-radius:8px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ventana .cuerpo{padding:clamp(16px,2.4vw,24px);display:grid;gap:16px}
-.demo-tag{justify-self:start;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6A2A;background:#F1E3C4;padding:4px 10px;border-radius:999px}
+/* Panel demo */
+.panel-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,60px);align-items:center}
+.ventana{border-radius:16px;background:#fff;color:#1B1E36;box-shadow:0 40px 80px -40px rgba(42,33,64,.6);overflow:hidden;min-width:0;border:1px solid #DCE6F3}
+.ventana .barra{display:flex;align-items:center;gap:7px;padding:12px 14px;background:#F1F5FB;border-bottom:1px solid #DCE6F3}
+.ventana .barra i{width:11px;height:11px;border-radius:50%;background:#C9D5E6}
+.ventana .barra span{margin-left:10px;font-size:.78rem;color:#5F6B80;background:#fff;padding:4px 12px;border-radius:8px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ventana .cuerpo{padding:clamp(14px,2.4vw,22px);display:grid;gap:14px}
+.demo-tag{justify-self:start;font-size:.72rem;font-weight:800;color:#8A5A0B;background:#FFF1D6;padding:4px 10px;border-radius:999px}
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.kpi{background:#fff;border:1px solid #E7E1D5;border-radius:12px;padding:12px}
-.kpi small{display:block;font-size:.72rem;color:#6B6880;text-transform:uppercase;letter-spacing:.08em}
-.kpi b{font-family:var(--f-display);font-size:1.7rem;font-weight:600;font-variant-numeric:tabular-nums}
-.kpi.k-ok b{color:#2F8A5B}.kpi.k-pe b{color:#A17A22}
+.kpi{background:#F8FAFD;border:1px solid #E3EAF4;border-radius:12px;padding:10px 12px}
+.kpi small{display:block;font-size:.74rem;color:#5F6B80;font-weight:700}
+.kpi b{font-size:1.6rem;font-weight:900;font-variant-numeric:tabular-nums}
+.kpi.k-ok b{color:var(--ok)}.kpi.k-pe b{color:var(--oro)}
 @media (max-width:560px){.kpis{grid-template-columns:1fr 1fr}}
 .crear{display:flex;flex-wrap:wrap;gap:8px}
-.crear input{flex:1 1 160px;min-width:0;padding:10px 12px;border-radius:10px;border:1px solid #D9D1C2;font:500 .92rem var(--f-body);background:#fff;color:#1B1E36}
-.crear input#demoPases{flex:0 0 84px}
-.crear button{padding:10px 16px;border-radius:10px;border:0;background:#1B1E36;color:#F7F4EE;font:600 .9rem var(--f-body);cursor:pointer}
-.tabla-wrap{overflow-x:auto;border:1px solid #E7E1D5;border-radius:12px;background:#fff}
-table{width:100%;border-collapse:collapse;font-size:.88rem}
-.tabla-wrap table{min-width:520px}
-th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:#6B6880;font-weight:600;padding:10px 12px;border-bottom:1px solid #EEE8DD}
-td{color:#1B1E36;padding:10px 12px;border-bottom:1px solid #F2EDE4;font-variant-numeric:tabular-nums}
+.crear input{flex:1 1 160px;min-width:0;padding:10px 12px;border-radius:10px;border:1px solid #D3DDEA;font:600 .95rem var(--f-body);background:#fff;color:#1B1E36}
+.crear input#demoPases{flex:0 0 80px}
+.crear button{padding:10px 16px;border-radius:10px;border:0;background:var(--cielo);color:#fff;font:800 .92rem var(--f-body);cursor:pointer}
+.tabla-wrap{overflow-x:auto;border:1px solid #E3EAF4;border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+.tabla-wrap table{min-width:500px}
+th{text-align:left;font-size:.74rem;color:#5F6B80;font-weight:800;padding:10px 12px;border-bottom:1px solid #E3EAF4;background:#F8FAFD}
+td{color:#1B1E36;padding:9px 12px;border-bottom:1px solid #EEF2F8;font-variant-numeric:tabular-nums}
 tr:last-child td{border-bottom:0}
 tr.nuevo td{animation:brillo 1.6s ease}
-@keyframes brillo{from{background:#FBF0D6}to{background:transparent}}
-.pill{display:inline-block;font-size:.74rem;font-weight:600;padding:3px 9px;border-radius:999px}
-.pill.ok{background:#DDF3E6;color:#22704A}.pill.pe{background:#F6EBCF;color:#8A6416}.pill.no{background:#F7DEDC;color:#9C3F39}
-.copiar{border:1px solid #D9D1C2;background:#FAF7F1;border-radius:8px;padding:5px 10px;font:600 .78rem var(--f-body);color:#1B1E36;cursor:pointer;white-space:nowrap}
-.copiar.hecho{background:#DDF3E6;border-color:#B9E2CA;color:#22704A}
+@keyframes brillo{from{background:#FFF1D6}to{background:transparent}}
+.pill{display:inline-block;font-size:.76rem;font-weight:800;padding:3px 9px;border-radius:999px}
+.pill.ok{background:#E3F6EC;color:#14724A}.pill.pe{background:#FFF1D6;color:#8A5A0B}.pill.no{background:#FCE4E3;color:#A33A36}
+.copiar{border:1px solid #D3DDEA;background:#fff;border-radius:8px;padding:5px 10px;font:700 .8rem var(--f-body);color:#1B1E36;cursor:pointer;white-space:nowrap}
+.copiar.hecho{background:#E3F6EC;border-color:#BCE5CF;color:#14724A}
 @media (max-width:900px){.panel-grid{grid-template-columns:1fr}}
 
-/* Papel (oferta y planes) */
-.papel{background:var(--papel);color:var(--tinta-osc);position:relative}
-.papel::before,.papel::after{content:"";position:absolute;left:0;right:0;height:14px;background:radial-gradient(circle at 7px 0,var(--noche) 6px,transparent 6.5px) 0 0/14px 14px repeat-x}
-.papel::before{top:0}
-.papel::after{bottom:0;transform:rotate(180deg)}
-.papel .eyebrow{color:var(--champan-2)}
-.papel .sec-head h2 em,.papel .h2 em{color:var(--champan-2)}
-.papel .lead{color:var(--tinta-suave)}
-
 /* Pila de valor */
-.pila{max-width:820px;margin:0 auto;background:#FFFBF4;border:1px solid var(--papel-2);border-radius:24px;overflow:hidden}
-.pila .item{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:18px clamp(18px,3vw,28px);border-bottom:1px solid #F0E7D6}
-.pila .item svg{width:22px;height:22px;color:var(--champan-2)}
+.pila{max-width:800px;margin:0 auto;background:var(--card);border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -40px rgba(42,33,64,.5)}
+.pila .item{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:16px clamp(16px,3vw,26px);border-bottom:1px solid var(--linea)}
+.pila .item svg{width:22px;height:22px;color:var(--ok)}
 .pila .item b{display:block;font-size:1.02rem}
-.pila .item small{color:var(--tinta-suave);font-size:.9rem}
-.pila .item .v{font-family:var(--f-display);font-size:1.15rem;color:var(--tinta-suave);white-space:nowrap;font-variant-numeric:tabular-nums}
-.pila .item.bono{background:#FBF4E6}
-.pila .item.bono b::before{content:"BONO · ";color:var(--champan-2);font-size:.78rem;letter-spacing:.12em}
-.pila .total{display:grid;gap:6px;justify-items:center;text-align:center;padding:30px 20px;background:var(--tinta-osc);color:var(--marfil)}
-.pila .total s{font-family:var(--f-display);font-size:1.5rem;color:var(--bruma);text-decoration-color:var(--rosa)}
-.pila .total b{font-family:var(--f-display);font-size:clamp(3rem,7vw,4.4rem);font-weight:600;color:var(--champan);line-height:1}
-.pila .total small{color:var(--bruma)}
+.pila .item small{color:var(--ink-2);font-size:.92rem}
+.pila .item .v{font-weight:800;color:var(--ink-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pila .item.bono{background:#FFF8EA}
+.pila .item.bono svg{color:var(--oro)}
+.pila .item.bono .tag{display:inline-block;font-size:.7rem;font-weight:900;color:#8A5A0B;background:#FFE7B3;border-radius:6px;padding:1px 6px;margin-right:6px;vertical-align:2px}
+.pila .total{display:grid;gap:4px;justify-items:center;text-align:center;padding:28px 20px;background:var(--ink);color:#fff}
+.pila .total s{font-size:1.3rem;font-weight:700;color:#B9B2CC;text-decoration-color:var(--cta)}
+.pila .total b{font-size:clamp(2.8rem,7vw,4rem);font-weight:900;line-height:1.05}
+.pila .total small{color:#CFC8E0}
 @media (max-width:520px){.pila .item{grid-template-columns:auto 1fr}.pila .item .v{grid-column:2}}
+
+/* Garantía */
+.garantia{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,40px);align-items:center;max-width:900px;margin:0 auto;background:var(--card);border-radius:28px;padding:clamp(24px,4vw,44px);box-shadow:0 30px 60px -40px rgba(42,33,64,.45)}
+.medalla{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 35% 30%,#FFD98A,#F2B544 55%,#C98F22);color:#4A2E00;box-shadow:0 0 0 8px #FFF1D6;font-weight:900;font-size:.78rem;line-height:1.2}
+.medalla b{display:block;font-size:2rem;line-height:1}
+.garantia h2{font-size:clamp(1.6rem,3.4vw,2.3rem)}
+.garantia p{color:var(--ink-2)}
+@media (max-width:640px){.garantia{grid-template-columns:1fr;justify-items:center;text-align:center}}
 
 /* Planes */
 .planes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
-.plan{position:relative;background:#FFFBF4;border:1px solid var(--papel-2);border-radius:22px;padding:32px 26px 26px;display:grid;grid-template-rows:auto auto auto 1fr auto auto auto;gap:18px;min-width:0;transition:transform .25s,box-shadow .25s}
-.plan:hover{transform:translateY(-4px);box-shadow:0 30px 60px -36px rgba(25,28,55,.45)}
-.plan h3{font-size:1.9rem}
-.plan .para{color:var(--tinta-suave);font-size:.96rem}
-.precio{display:grid;gap:2px}
-.precio .antes{font-size:.9rem;color:var(--tinta-suave)}
-.precio .antes s{text-decoration-color:#C55B5B}
+.plan{position:relative;background:var(--card);border:2px solid var(--linea);border-radius:24px;padding:30px 24px 24px;display:grid;grid-template-rows:auto auto auto 1fr auto auto;gap:16px;min-width:0}
+.plan h3{font-size:1.5rem}
+.plan .para{color:var(--ink-2);font-size:.98rem;line-height:1.5}
+.precio{display:grid;gap:0}
+.precio .antes{font-size:.92rem;color:var(--ink-2);font-weight:600}
+.precio .antes s{text-decoration-color:var(--cta)}
 .precio div{display:flex;align-items:baseline;gap:8px}
-.precio b{font-family:var(--f-display);font-size:3.6rem;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
-.precio small{color:var(--tinta-suave);font-size:.9rem}
-.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;align-content:start;font-size:.95rem}
-.plan li{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start}
-.plan li svg{width:18px;height:18px;margin-top:3px;color:var(--champan-2)}
-.plan li.sube{font-weight:600}
-.plan li.base{color:var(--tinta-suave);font-style:italic}
-.plan li.bono{color:#8A6416;font-weight:600}
+.precio b{font-size:3.2rem;font-weight:900;line-height:1.05;font-variant-numeric:tabular-nums}
+.precio small{color:var(--ink-2);font-size:.9rem;font-weight:600}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;align-content:start;font-size:.97rem;line-height:1.45}
+.plan li{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start}
+.plan li svg{width:20px;height:20px;margin-top:1px;color:var(--ok)}
+.plan li.base{color:var(--ink-2);font-weight:700}
+.plan li.bono svg{color:var(--oro)}
+.plan li.bono{color:#8A5A0B;font-weight:700}
 .plan .btn{width:100%}
-.plan .btn-plan{background:var(--tinta-osc);color:var(--papel)}
-.plan .btn-plan:hover{transform:translateY(-2px)}
-.plan.dest{background:var(--tinta-osc);color:var(--marfil);border-color:var(--tinta-osc);box-shadow:0 40px 80px -40px rgba(25,28,55,.75);transform:translateY(-10px)}
-.plan.dest:hover{transform:translateY(-14px)}
-.plan.dest .para,.plan.dest .precio small,.plan.dest .precio .antes,.plan.dest li.base{color:var(--bruma)}
-.plan.dest li svg{color:var(--champan)}
-.plan.dest li.bono{color:var(--champan)}
-.cinta{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,#F3D79C,var(--champan));color:#1A1430;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;border-radius:999px;white-space:nowrap}
-.upsell{display:flex;align-items:center;gap:10px;border-radius:12px;padding:12px 14px;font-size:.88rem;line-height:1.35;background:#F6EAD0;color:#5E4512}
+.plan.dest{border-color:var(--cta);box-shadow:0 30px 60px -30px rgba(255,77,109,.45);transform:translateY(-8px)}
+.cinta{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--cta),var(--cta-2));color:#fff;font-size:.8rem;font-weight:900;padding:6px 16px;border-radius:999px;white-space:nowrap}
+.upsell{display:flex;align-items:center;gap:10px;border-radius:12px;padding:11px 13px;font-size:.9rem;line-height:1.35;background:var(--cielo-claro);color:#1F4F7E;font-weight:600}
 .upsell svg{width:18px;height:18px;flex:none}
-.plan.dest .upsell{background:rgba(231,196,127,.13);color:var(--champan)}
-.limite{font-size:.8rem;color:var(--tinta-suave);text-align:center}
-.plan.dest .limite{color:var(--bruma)}
-@media (max-width:980px){.planes{grid-template-columns:1fr;max-width:520px;margin:0 auto}.plan.dest{transform:none}.plan.dest:hover{transform:translateY(-4px)}}
-.comparar{margin-top:48px}
-.comparar summary{cursor:pointer;font-weight:600;list-style:none;display:inline-flex;align-items:center;gap:10px;color:var(--tinta-osc);padding:12px 20px;border:1px solid var(--papel-2);border-radius:999px;background:#FFFBF4}
+@media (max-width:980px){.planes{grid-template-columns:1fr;max-width:500px;margin:0 auto}.plan.dest{transform:none}}
+.comparar{margin-top:40px;text-align:center}
+.comparar summary{cursor:pointer;font-weight:800;list-style:none;display:inline-flex;align-items:center;gap:8px;color:var(--ink);padding:10px 18px;border:2px solid var(--linea);border-radius:999px;background:#fff}
 .comparar summary::-webkit-details-marker{display:none}
-.comparar summary::after{content:"+";font-size:1.2rem;color:var(--champan-2)}
+.comparar summary::after{content:"+";font-size:1.2rem;color:var(--cta)}
 .comparar[open] summary::after{content:"–"}
-.cmp-wrap{overflow-x:auto;margin-top:20px;border:1px solid var(--papel-2);border-radius:16px;background:#FFFBF4}
-.cmp{min-width:600px;font-size:.93rem}
-.cmp th{color:var(--tinta-suave);border-bottom:1px solid var(--papel-2);padding:14px 16px}
+.cmp-wrap{overflow-x:auto;margin-top:18px;border:1px solid var(--linea);border-radius:16px;background:#fff;text-align:left}
+.cmp{min-width:580px;font-size:.94rem}
+.cmp th{color:var(--ink-2);padding:12px 14px;background:#fff;border-bottom:1px solid var(--linea)}
 .cmp th:not(:first-child),.cmp td:not(:first-child){text-align:center;width:16%}
-.cmp td{padding:12px 16px;border-bottom:1px solid #F0E7D6;color:var(--tinta-osc)}
-.cmp .si{color:var(--champan-2);font-weight:700}
-.cmp .no-inc{color:#C9BFAE}
-.cmp tr.grupo td{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--champan-2);background:#FBF4E6}
+.cmp td{padding:10px 14px;border-bottom:1px solid #F5EEEA;color:var(--ink)}
+.cmp .si{color:var(--ok);font-weight:900}
+.cmp .no-inc{color:#C9BFBA}
 
-/* Garantía */
-.garantia{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,48px);align-items:center;max-width:960px;margin:0 auto;border:1px solid rgba(231,196,127,.4);border-radius:28px;padding:clamp(26px,4vw,48px);background:radial-gradient(circle at 0 0,rgba(231,196,127,.1),transparent 60%),var(--noche-2)}
-.medalla{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 35% 30%,#F3D79C,var(--champan) 45%,var(--champan-2));color:#1A1430;box-shadow:0 0 0 8px rgba(231,196,127,.15),0 20px 50px -20px rgba(231,196,127,.6);font-weight:800;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;line-height:1.3}
-.medalla b{display:block;font-family:var(--f-display);font-size:2.2rem;letter-spacing:0;text-transform:none;font-weight:600;line-height:1}
-.garantia h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
-.garantia h2 em{color:var(--champan)}
-.garantia p{color:var(--bruma)}
-@media (max-width:640px){.garantia{grid-template-columns:1fr;justify-items:center;text-align:center}}
-
-/* Después de reservar */
-.ruta{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--linea);border-radius:var(--r);overflow:hidden}
-.ruta div{padding:26px 22px;display:grid;gap:8px;align-content:start;border-right:1px solid var(--linea);min-width:0}
-.ruta div:last-child{border-right:0}
-.ruta span{font-family:var(--f-display);font-style:italic;color:var(--champan);font-size:1.05rem}
-.ruta h3{font-family:var(--f-body);font-weight:700;font-size:1.02rem;letter-spacing:0}
-.ruta p{color:var(--bruma);font-size:.93rem}
-@media (max-width:980px){.ruta{grid-template-columns:1fr 1fr}.ruta div{border-bottom:1px solid var(--linea)}.ruta div:nth-child(2n){border-right:0}.ruta div:last-child{grid-column:1/-1;border-bottom:0}}
-@media (max-width:480px){.ruta{grid-template-columns:1fr}.ruta div{border-right:0}}
+/* Pasos */
+.ruta{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:p}
+.ruta div{background:var(--card);border-radius:20px;padding:24px 20px;display:grid;gap:6px;align-content:start;min-width:0;box-shadow:0 16px 40px -32px rgba(42,33,64,.45)}
+.ruta div::before{counter-increment:p;content:counter(p);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:900;background:var(--rosa-claro);color:var(--cta-osc);margin-bottom:6px}
+.ruta h3{font-size:1.08rem}
+.ruta p{color:var(--ink-2);font-size:.95rem;line-height:1.5}
+@media (max-width:900px){.ruta{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.ruta{grid-template-columns:1fr}}
 
 /* Preguntas */
-.faq{display:grid;max-width:880px;border-top:1px solid var(--linea)}
-.faq details{border-bottom:1px solid var(--linea)}
-.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:22px 0;font-size:1.08rem;font-weight:600}
+.faq{display:grid;gap:10px;max-width:820px;margin:0 auto}
+.faq details{background:var(--card);border-radius:16px;padding:0 20px;border:1px solid var(--linea)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:18px 0;font-weight:800}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--champan);font-size:1.4rem;line-height:1;flex:none}
+.faq summary::after{content:"+";color:var(--cta);font-size:1.4rem;line-height:1;flex:none}
 .faq details[open] summary::after{content:"–"}
-.faq p{color:var(--bruma);padding-bottom:22px;max-width:70ch}
+.faq p{color:var(--ink-2);padding-bottom:18px}
 
-/* Dos caminos */
-.caminos{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:960px;margin:0 auto}
-.camino{border-radius:22px;padding:clamp(24px,3vw,34px);display:grid;gap:12px;align-content:start}
-.camino h3{font-size:1.5rem}
-.camino.a{border:1px dashed var(--linea);color:var(--bruma)}
-.camino.b{border:1px solid var(--champan);background:rgba(231,196,127,.07)}
-.camino.b h3{color:var(--champan)}
-@media (max-width:720px){.caminos{grid-template-columns:1fr}}
+/* Cierre */
+.cierre{background:linear-gradient(135deg,#2A2140,#3B2A55);color:#fff;text-align:center}
+.cierre .w{display:grid;justify-items:center;gap:20px}
+.cierre h2{font-size:clamp(2rem,5vw,3.4rem);max-width:18ch}
+.cierre .lead{color:#D8D1E8;margin:0 auto}
+.elige{width:100%;max-width:640px;display:grid;gap:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:clamp(18px,3vw,28px)}
+.elige p{font-weight:800;font-size:.95rem;color:#fff;text-align:left}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills label{position:relative;cursor:pointer}
+.pills input{position:absolute;opacity:0;width:1px;height:1px}
+.pills span{display:inline-block;padding:9px 15px;border-radius:999px;border:2px solid rgba(255,255,255,.22);font-weight:700;font-size:.93rem;color:#fff;transition:background .15s,border-color .15s}
+.pills input:checked+span{background:#fff;color:var(--ink);border-color:#fff}
+.pills input:focus-visible+span{outline:3px solid var(--cielo);outline-offset:2px}
+.elige .btn{width:100%}
+.elige .nota{font-size:.88rem;color:#D8D1E8;text-align:center}
+.elige .nota b{color:#fff;user-select:all}
 
-/* Cierre + formulario */
-.cierre{position:relative;overflow:hidden;text-align:center}
-.cierre::before{content:"";position:absolute;inset:auto 0 -40% 0;height:80%;background:radial-gradient(closest-side,rgba(231,196,127,.16),transparent);pointer-events:none}
-.cierre .w{position:relative;display:grid;justify-items:center;gap:22px}
-.cierre h2{font-size:clamp(2.3rem,5.4vw,4.4rem);max-width:17ch}
-.cierre h2 .script{font-family:var(--f-script);font-weight:400;color:var(--champan);font-size:1.15em}
-.sello{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#C55B5B,#8E2F33 70%);box-shadow:0 0 0 6px rgba(142,47,51,.25),inset 0 -6px 12px rgba(0,0,0,.35);font-family:var(--f-display);font-style:italic;font-size:.95rem;color:#F6D7C8;letter-spacing:.06em}
-.form{width:100%;max-width:640px;text-align:left;display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--noche-2);border:1px solid var(--linea);border-radius:22px;padding:clamp(20px,3vw,32px);margin-top:8px}
-.form .full{grid-column:1/-1}
-.form label{display:grid;gap:6px;font-size:.85rem;color:var(--bruma);min-width:0}
-.form input,.form select{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--linea);background:var(--noche);color:var(--marfil);font:500 1rem var(--f-body)}
-.form .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.form .packs label{display:block;cursor:pointer;position:relative}
-.form .packs input{position:absolute;opacity:0;width:1px;height:1px}
-.form .packs span{display:grid;gap:2px;text-align:center;padding:12px 8px;border-radius:12px;border:1px solid var(--linea);color:var(--marfil);font-weight:600;transition:border-color .2s,background .2s}
-.form .packs span small{font-weight:500;color:var(--bruma);font-size:.8rem}
-.form .packs input:checked+span{border-color:var(--champan);background:rgba(231,196,127,.1)}
-.form .packs input:focus-visible+span{outline:2px solid var(--champan);outline-offset:2px}
-.form .btn{grid-column:1/-1;width:100%}
-.form .nota{grid-column:1/-1;font-size:.86rem;color:var(--bruma);text-align:center}
-.form .nota b{color:var(--marfil);user-select:all}
-.mensaje{grid-column:1/-1;display:grid;gap:10px;background:var(--noche);border:1px dashed var(--champan-2);border-radius:14px;padding:16px;font-size:.92rem;color:var(--marfil);white-space:pre-wrap}
-.mensaje button{justify-self:start}
-@media (max-width:560px){.form{grid-template-columns:1fr}.form .packs{grid-template-columns:1fr}}
-
-footer{border-top:1px solid var(--linea);padding-block:32px 110px;color:var(--bruma);font-size:.88rem}
+footer{background:#221A35;color:#B9B2CC;padding-block:26px 104px;font-size:.9rem}
 footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+footer .logo{color:#fff;font-size:1.3rem}
 
 /* Barra fija en celular */
-.barra-movil{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;align-items:center;justify-content:space-between;gap:12px;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(15,18,41,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--linea);transform:translateY(110%);transition:transform .35s}
+.barra-movil{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(255,255,255,.97);border-top:1px solid var(--linea);box-shadow:0 -10px 30px -20px rgba(42,33,64,.4);transform:translateY(110%);transition:transform .3s}
 .barra-movil.ver{transform:none}
-.barra-movil small{display:block;color:var(--bruma);font-size:.75rem}
-.barra-movil b{font-family:var(--f-display);font-size:1.25rem}
-.barra-movil .btn{padding:12px 18px;font-size:.92rem}
+.barra-movil small{display:block;color:var(--ink-2);font-size:.78rem;font-weight:600}
+.barra-movil b{font-size:1.2rem;font-weight:900}
+.barra-movil .btn{padding:12px 18px;font-size:.95rem}
 @media (max-width:860px){.barra-movil{display:flex}}
-
-.revela{transition:opacity .8s ease,transform .8s ease}
-.js .revela.espera{opacity:.001;transform:translateY(24px)}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.js .revela.espera{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -391,189 +336,165 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
-    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7 7l10 10M17 7L7 17"/></symbol>
-    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
-    <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M6 11l6-6 6 6"/></symbol>
-    <symbol id="i-gift" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9S10 4 7.5 4.5C5 5 6 9 12 9Zm0 0s2-5 4.5-4.5C19 5 18 9 12 9Z"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M7 7l10 10M17 7L7 17"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9S10 4 7.5 4.5C5 5 6 9 12 9Zm0 0s2-5 4.5-4.5C19 5 18 9 12 9Z"/></g></symbol>
     <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
-    <symbol id="i-musica" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 18V5l11-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm11-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></symbol>
-    <symbol id="i-reloj" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></g></symbol>
-    <symbol id="i-rsvp" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
-    <symbol id="i-foto" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
-    <symbol id="i-panel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h3M8 16h6"/></g></symbol>
-    <symbol id="i-link" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
-    <symbol id="i-cel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path stroke-linecap="round" d="M11 18.5h2"/></g></symbol>
-    <symbol id="i-mano" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 4v10M8 10l4 4 4-4M5 20h14"/></symbol>
-    <symbol id="i-qr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM14 18h2M18 14h2"/></g></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-musica" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 18V5l11-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm11-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></g></symbol>
+    <symbol id="i-rsvp" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-foto" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
+    <symbol id="i-panel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h3M8 16h6"/></g></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+    <symbol id="i-cel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path stroke-linecap="round" d="M11 18.5h2"/></g></symbol>
+    <symbol id="i-mano" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v10M8 10l4 4 4-4M5 20h14"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM14 18h2M18 14h2"/></g></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-rayo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
   </defs>
 </svg>
 
-<div class="aviso"><div class="w">Diseñamos cada invitación a mano, por eso tomamos <b>pocos eventos por semana</b>. Reserva tu fecha con tiempo.</div></div>
+<div class="aviso"><div class="w">Hacemos cada invitación a mano: <b>pocos cupos por semana</b>.</div></div>
 
 <header class="top">
   <div class="w">
-    <a class="logo" href="#inicio" aria-label="Invitarte, inicio">Invitarte<small>Invitaciones web</small></a>
+    <a class="logo" href="#inicio" aria-label="Invitarte, inicio">Invit<span>arte</span></a>
     <nav class="nav" aria-label="Principal">
       <a class="l" href="#ejemplos">Ejemplos</a>
-      <a class="l" href="#oferta">La oferta</a>
-      <a class="l" href="#planes">Planes</a>
+      <a class="l" href="#planes">Precios</a>
       <a class="l" href="#preguntas">Preguntas</a>
-      <a class="btn btn-oro" href="#planes">Reservar mi invitación</a>
+      <a class="btn btn-cta" href="#planes">Ver precios</a>
     </nav>
   </div>
 </header>
 
 <main id="inicio">
 
-<!-- ATENCIÓN -->
 <section class="hero">
-  <canvas id="chispas" aria-hidden="true"></canvas>
   <div class="w">
     <div class="hero-txt">
-      <p class="eyebrow">Para XV años, bodas, baby shower, revelación y cumpleaños</p>
-      <h1>Invitaciones que <span class="script">enamoran</span> y confirman por ti</h1>
-      <p class="lead">Tus invitados la abren desde WhatsApp, escuchan tu canción, confirman con un toque y te dejan sus fotos. Tú ves en tu celular cuántos vienen. Solo nos mandas tus datos y fotos; del resto nos encargamos nosotros.</p>
+      <p class="eyebrow">XV años · Bodas · Baby shower · Cumpleaños</p>
+      <h1>La invitación que <mark>enamora</mark> a tus invitados y confirma por ti</h1>
+      <p class="lead">Se abre desde WhatsApp, suena tu canción y tus invitados confirman con un toque. Tú solo nos mandas fotos y datos.</p>
       <div class="hero-ctas">
-        <a class="btn btn-oro btn-grande" href="#planes">Quiero mi invitación</a>
-        <a class="btn btn-linea btn-grande" href="#ejemplos">Ver 6 ejemplos</a>
+        <a class="btn btn-cta btn-grande" href="#planes">Ver precios desde USD 80</a>
+        <a class="btn btn-borde btn-grande" href="#ejemplos">Ver ejemplos</a>
       </div>
-      <div class="bajo-cta">
+      <div class="ticks">
         <span><svg><use href="#i-check"/></svg>Garantía de amor al primer diseño</span>
-        <span><svg><use href="#i-check"/></svg>Sin apps: se abre en cualquier celular</span>
-        <span><svg><use href="#i-check"/></svg>Desde USD 80, pago único</span>
+        <span><svg><use href="#i-check"/></svg>Sin apps</span>
+        <span><svg><use href="#i-check"/></svg>Pago único</span>
       </div>
     </div>
     <div class="hero-foto">
-      <img src="img/hero-foto.jpg" alt="Mano sosteniendo un celular con una invitación digital de XV años sobre una mesa de fiesta con velas y rosas">
+      <img src="img/hero-foto.jpg" alt="Mano sosteniendo un celular con una invitación digital de XV años sobre una mesa de fiesta">
       <div class="chip c1"><span class="ic"><svg><use href="#i-check"/></svg></span><span><b>Familia Rojas confirmó</b><small>4 pases · hace 2 min</small></span></div>
       <div class="chip c2"><span class="ic"><svg><use href="#i-musica"/></svg></span><span><b>Con tu canción</b><small>suena al abrir</small></span></div>
-      <div class="chip c3"><span class="ic"><svg><use href="#i-reloj"/></svg></span><span><b>Faltan 12 días</b><small>cuenta regresiva en vivo</small></span></div>
+      <div class="chip c3"><span class="ic"><svg><use href="#i-reloj"/></svg></span><span><b>Faltan 12 días</b><small>cuenta regresiva</small></span></div>
     </div>
   </div>
 </section>
 
-<div class="tipos"><div class="w">
-  <a href="#ejemplos" data-ir="xv">XV años</a><i>✦</i><a href="#ejemplos" data-ir="boda">Matrimonio</a><i>✦</i><a href="#ejemplos" data-ir="baby">Baby shower</a><i>✦</i><a href="#ejemplos" data-ir="rev">Revelación de sexo</a><i>✦</i><a href="#ejemplos" data-ir="bebe">Primer añito</a><i>✦</i><a href="#ejemplos" data-ir="heroe">Cumpleaños infantil</a>
-</div></div>
+<div class="confianza">
+  <div class="w">
+    <div><span class="ic" style="background:#E3F6EC;color:var(--ok)"><svg><use href="#i-escudo"/></svg></span><span><b>Ya probado</b><small>+110 invitados en fiestas reales</small></span></div>
+    <div><span class="ic" style="background:var(--rosa-claro);color:var(--cta)"><svg><use href="#i-rayo"/></svg></span><span><b>Rápido</b><small>Primera versión en pocos días</small></span></div>
+    <div><span class="ic" style="background:var(--cielo-claro);color:var(--cielo)"><svg><use href="#i-chat"/></svg></span><span><b>Sin complicaciones</b><small>Todo por WhatsApp</small></span></div>
+    <div><span class="ic" style="background:var(--oro-claro);color:var(--oro)"><svg><use href="#i-cel"/></svg></span><span><b>Cualquier celular</b><small>iPhone y Android</small></span></div>
+  </div>
+</div>
 
-<!-- INTERÉS: problema -->
 <section class="sec">
   <div class="w">
-    <div class="sec-head revela">
-      <p class="eyebrow">El problema de siempre</p>
-      <h2>Mandas la invitación y empieza el <em>“¿al final vienes?”</em></h2>
-      <p class="lead">Una foto o un PDF se pierde entre los chats. Nadie confirma a tiempo, te preguntan la dirección tres veces y a una semana de la fiesta todavía no sabes cuántas sillas, platos y recuerdos pedir.</p>
+    <div class="sec-head">
+      <p class="eyebrow">¿Te pasa esto?</p>
+      <h2>Mandas la invitación y nadie confirma</h2>
+      <p class="lead">Con una imagen o PDF, a una semana de la fiesta todavía no sabes cuántos van.</p>
     </div>
     <div class="vs">
-      <div class="vs-col vs-antes revela">
+      <div class="vs-col vs-antes">
         <h3>Invitación en imagen o PDF</h3>
         <ul class="lista">
-          <li><svg><use href="#i-x"/></svg><span>Le escribes a cada familia para saber si viene.</span></li>
-          <li><svg><use href="#i-x"/></svg><span>Pagas comida y puestos de más “por si acaso”.</span></li>
-          <li><svg><use href="#i-x"/></svg><span>La dirección y la hora quedan perdidas en el chat.</span></li>
-          <li><svg><use href="#i-x"/></svg><span>Las fotos de la fiesta quedan repartidas en 40 celulares.</span></li>
-          <li><svg><use href="#i-x"/></svg><span>Si cambia un dato, rehaces y reenvías todo.</span></li>
+          <li><svg><use href="#i-x"/></svg><span>Le escribes a cada familia para saber si viene</span></li>
+          <li><svg><use href="#i-x"/></svg><span>Pagas comida de más “por si acaso”</span></li>
+          <li><svg><use href="#i-x"/></svg><span>Te preguntan la dirección una y otra vez</span></li>
+          <li><svg><use href="#i-x"/></svg><span>Las fotos quedan en 40 celulares distintos</span></li>
         </ul>
       </div>
-      <div class="vs-col vs-despues revela">
-        <h3>Invitación web Invitarte</h3>
+      <div class="vs-col vs-despues">
+        <h3>Con Invitarte</h3>
         <ul class="lista">
-          <li><svg><use href="#i-check"/></svg><span>Cada invitado confirma con un toque y tú lo ves al instante.</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Sabes el número exacto de personas para el banquetero.</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Botón “Cómo llegar” que abre el mapa en su celular.</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Los invitados suben sus fotos y videos a un álbum común.</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Cambias un dato y el mismo enlace ya muestra lo nuevo.</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Confirman con un toque y lo ves al instante</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Sabes el número exacto de personas</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Botón “Cómo llegar” con el mapa</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Todas las fotos de la fiesta en un solo álbum</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- INTERÉS: por qué es fácil decir que sí -->
-<section class="sec" style="padding-top:0">
+<section class="sec band-rosa" id="ejemplos">
   <div class="w">
-    <div class="sec-head revela">
-      <p class="eyebrow">Por qué es una decisión fácil</p>
-      <h2>Más resultado, <em>menos esfuerzo</em> para ti</h2>
-    </div>
-    <div class="ecuacion revela">
-      <div><small>Lo que logras</small><h3>Una fiesta llena y organizada</h3><p>Invitados emocionados que confirman a tiempo, y tú con el número exacto en la mano.</p></div>
-      <div><small>Seguridad</small><h3>Ya funcionó en eventos reales</h3><p>Más de 110 invitados gestionados en línea en las fiestas de Sara y Valentín.</p></div>
-      <div><small>Rapidez</small><h3>Primera versión en días</h3><p>No esperas semanas. Ves tu invitación funcionando y la ajustamos contigo.</p></div>
-      <div><small>Tu esfuerzo</small><h3>Casi cero</h3><p>Nos mandas fotos y datos por WhatsApp. Diseño, programación y publicación corren por nuestra cuenta.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- DESEO: galería de 6 tipos -->
-<section class="sec" id="ejemplos" style="padding-top:clamp(24px,4vw,48px)">
-  <div class="w">
-    <div class="sec-head revela">
-      <p class="eyebrow">Mira lo que hacemos</p>
-      <h2>Una invitación distinta <em>para cada historia</em></h2>
-      <p class="lead">Dos son de clientes reales y puedes abrirlas en vivo. Las demás son diseños de muestra: toca y desliza dentro del celular para recorrerlas como un invitado.</p>
+    <div class="sec-head">
+      <p class="eyebrow">Ejemplos</p>
+      <h2>Elige tu tipo de fiesta y mira cómo queda</h2>
+      <p class="lead">Las de muestra se pueden probar: desliza y toca dentro del celular.</p>
     </div>
 
     <div class="tabs" role="tablist" aria-label="Tipos de invitación">
-      <button class="tab" role="tab" id="tab-xv" aria-controls="pan-xv" aria-selected="true"><small>Cliente real</small>XV años</button>
-      <button class="tab" role="tab" id="tab-heroe" aria-controls="pan-heroe" aria-selected="false" tabindex="-1"><small>Cliente real</small>Cumpleaños infantil</button>
-      <button class="tab" role="tab" id="tab-boda" aria-controls="pan-boda" aria-selected="false" tabindex="-1"><small>Muestra</small>Matrimonio</button>
-      <button class="tab" role="tab" id="tab-baby" aria-controls="pan-baby" aria-selected="false" tabindex="-1"><small>Muestra</small>Baby shower</button>
-      <button class="tab" role="tab" id="tab-rev" aria-controls="pan-rev" aria-selected="false" tabindex="-1"><small>Muestra</small>Revelación de sexo</button>
-      <button class="tab" role="tab" id="tab-bebe" aria-controls="pan-bebe" aria-selected="false" tabindex="-1"><small>Muestra</small>Primer añito</button>
+      <button class="tab" role="tab" id="tab-xv" aria-controls="pan-xv" aria-selected="true"><i style="background:#C0392B"></i>XV años</button>
+      <button class="tab" role="tab" id="tab-heroe" aria-controls="pan-heroe" aria-selected="false" tabindex="-1"><i style="background:#2F6FD1"></i>Cumpleaños infantil</button>
+      <button class="tab" role="tab" id="tab-boda" aria-controls="pan-boda" aria-selected="false" tabindex="-1"><i style="background:#C9A055"></i>Matrimonio</button>
+      <button class="tab" role="tab" id="tab-baby" aria-controls="pan-baby" aria-selected="false" tabindex="-1"><i style="background:#8FB08A"></i>Baby shower</button>
+      <button class="tab" role="tab" id="tab-rev" aria-controls="pan-rev" aria-selected="false" tabindex="-1"><i style="background:#E89BBF"></i>Revelación de sexo</button>
+      <button class="tab" role="tab" id="tab-bebe" aria-controls="pan-bebe" aria-selected="false" tabindex="-1"><i style="background:#E0762F"></i>Primer añito</button>
     </div>
 
-    <!-- XV real -->
     <div class="vitrina" role="tabpanel" id="pan-xv" aria-labelledby="tab-xv">
       <div class="montaje">
-        <img class="foto" src="img/sara-foto.jpg" alt="Celular con la invitación de XV años de Sara Valentina en un salón con candelabros y una rosa bajo cúpula">
-        <div class="phone"><div class="screen" data-rota><img class="on" src="img/sara-portada.jpg" alt="Portada: rosa encantada y el nombre Sara Valentina"><img src="img/sara-jardin.jpg" alt="El Jardín Encantado con el relato"><img src="img/sara-cuenta.jpg" alt="Cuenta regresiva y datos"><img src="img/sara-confirma.jpg" alt="Confirmación y libro de firmas"></div></div>
+        <img class="foto" src="img/sara-foto.jpg" alt="Celular con la invitación de XV años de Sara Valentina en un salón con candelabros">
+        <div class="phone"><div class="screen" data-rota><img class="on" src="img/sara-portada.jpg" alt="Portada: rosa encantada y el nombre Sara Valentina"><img src="img/sara-jardin.jpg" alt="El Jardín Encantado"><img src="img/sara-cuenta.jpg" alt="Cuenta regresiva y datos"><img src="img/sara-confirma.jpg" alt="Confirmación y libro de firmas"></div></div>
       </div>
       <div class="ficha">
-        <span class="sello-tipo real">Cliente real · evento celebrado</span>
-        <span class="tipo-script">Quince años</span>
-        <h3>Sara Valentina · Un cuento hecho realidad</h3>
-        <p>Temática de cuento de hadas en versión elegante: dorado, azul rey y el rojo de una rosa encantada. Cada familia recibió su propio enlace con sus pases.</p>
-        <ul class="lista oro">
-          <li><svg><use href="#i-check"/></svg><span>Música de fondo y relato de la quinceañera</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Enlace personal por familia con saludo y pases</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Libro de firmas con fotos de los invitados</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Datos de transferencia con botón copiar y dominio propio</span></li>
+        <span class="sello-tipo real">Cliente real</span>
+        <h3>XV años de Sara Valentina</h3>
+        <p>Elegante, en dorado, azul y rojo. Cada familia recibió su enlace con sus pases.</p>
+        <ul class="lista si">
+          <li><svg><use href="#i-check"/></svg><span>Música y relato de la quinceañera</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Enlace personal por familia</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Libro de firmas con fotos</span></li>
         </ul>
-        <div class="acciones"><a class="btn btn-oro" href="#planes" data-evento="XV años">Quiero una así</a><a class="btn btn-linea" href="https://15saravalentina.online/" target="_blank" rel="noopener">Abrir en vivo</a></div>
+        <div class="acciones"><a class="btn btn-cta" data-wa="Hola, quiero una invitación de XV años como la de Sara Valentina." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Quiero una así</a><a class="btn btn-borde" href="https://15saravalentina.online/" target="_blank" rel="noopener">Verla en vivo</a></div>
       </div>
     </div>
 
-    <!-- Valentín real -->
     <div class="vitrina" role="tabpanel" id="pan-heroe" aria-labelledby="tab-heroe" hidden>
       <div class="montaje">
-        <img class="foto" src="img/valen-foto.jpg" alt="Niño sosteniendo un celular con la invitación de superhéroes de Valentín en una fiesta azul y dorada">
-        <div class="phone"><div class="screen" data-rota><img class="on" src="img/valen-portada.jpg" alt="Portada estilo película: Valentín cumple 4"><img src="img/valen-mision.jpg" alt="La misión: fecha, horario y lugar"><img src="img/valen-estreno.jpg" alt="Cuenta regresiva Para el estreno"><img src="img/valen-felicita.jpg" alt="Formulario de felicitaciones"><img src="img/valen-final.jpg" alt="Créditos finales"></div></div>
+        <img class="foto" src="img/valen-foto.jpg" alt="Niño sosteniendo un celular con la invitación de superhéroes de Valentín">
+        <div class="phone"><div class="screen" data-rota><img class="on" src="img/valen-portada.jpg" alt="Portada estilo película: Valentín cumple 4"><img src="img/valen-mision.jpg" alt="La misión: fecha, horario y lugar"><img src="img/valen-estreno.jpg" alt="Cuenta regresiva"><img src="img/valen-felicita.jpg" alt="Felicitaciones"><img src="img/valen-final.jpg" alt="Créditos finales"></div></div>
       </div>
       <div class="ficha">
-        <span class="sello-tipo real">Cliente real · evento celebrado</span>
-        <span class="tipo-script">Cumpleaños infantil</span>
-        <h3>Valentín cumple 4 · Una película de superhéroes</h3>
-        <p>Se abre como el estreno de una película: videos de héroes a pantalla completa, música épica y cuenta regresiva “para el estreno”. En la fiesta, un QR permitió subir fotos y videos al instante.</p>
-        <ul class="lista oro">
-          <li><svg><use href="#i-check"/></svg><span>Videos cinematográficos a pantalla completa</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Confirmación Sí / No con textos divertidos</span></li>
-          <li><svg><use href="#i-check"/></svg><span>QR impreso para subir fotos durante la fiesta</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Panel con descarga de todo el álbum en ZIP</span></li>
+        <span class="sello-tipo real">Cliente real</span>
+        <h3>Valentín cumple 4: una película de superhéroes</h3>
+        <p>Se abre como el estreno de una película, con videos y música épica.</p>
+        <ul class="lista si">
+          <li><svg><use href="#i-check"/></svg><span>Videos a pantalla completa</span></li>
+          <li><svg><use href="#i-check"/></svg><span>QR para subir fotos en la fiesta</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Álbum descargable en ZIP</span></li>
         </ul>
-        <div class="acciones"><a class="btn btn-oro" href="#planes" data-evento="Cumpleaños infantil">Quiero una así</a><a class="btn btn-linea" href="https://jetsonchile-bit.github.io/cumple-valentin/" target="_blank" rel="noopener">Abrir en vivo</a></div>
+        <div class="acciones"><a class="btn btn-cta" data-wa="Hola, quiero una invitación de cumpleaños infantil como la de Valentín." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Quiero una así</a><a class="btn btn-borde" href="https://jetsonchile-bit.github.io/cumple-valentin/" target="_blank" rel="noopener">Verla en vivo</a></div>
       </div>
     </div>
 
-    <!-- Boda -->
     <div class="vitrina" role="tabpanel" id="pan-boda" aria-labelledby="tab-boda" hidden>
       <div class="montaje">
-        <img class="foto" src="img/boda-foto.jpg" alt="Celular con invitación de matrimonio sobre lino blanco, rosas y anillos de oro">
+        <img class="foto" src="img/boda-foto.jpg" alt="Celular con invitación de matrimonio sobre lino blanco, rosas y anillos">
         <div class="phone"><div class="screen">
           <div class="mi t-boda" data-fecha="2027-03-20T17:00">
-            <img class="portada" src="img/boda-portada.jpg" alt="Portada: Nos casamos, Valeria y Tomás, 20 de marzo de 2027">
+            <img class="portada" src="img/boda-portada.jpg" alt="Portada: Nos casamos, Valeria y Tomás">
             <div class="cuerpo">
               <div class="bloque"><span class="lbl">Faltan</span><div class="cd"></div></div>
               <div class="bloque"><span class="tit">El gran día</span>
@@ -586,7 +507,7 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
                 <div class="fila"><span>20:00</span><b>Cena</b></div>
                 <div class="fila"><span>21:30</span><b>Primer baile y fiesta</b></div>
               </div>
-              <div class="bloque"><span class="tit">Mesa de regalos</span><span>Tu presencia es nuestro mejor regalo. Si quieres hacernos un obsequio:</span><button class="mb" type="button" data-copia>Copiar datos de transferencia</button></div>
+              <div class="bloque"><span class="tit">Mesa de regalos</span><span>Tu presencia es nuestro mejor regalo.</span><button class="mb" type="button" data-copia>Copiar datos de transferencia</button></div>
               <div class="bloque" data-rsvp><span class="tit">¿Nos acompañas?</span><div class="bts"><button class="mb" type="button" data-si>Sí, asistiré</button><button class="mb sec2" type="button" data-no>No podré</button></div></div>
               <span class="pie">Diseño de muestra · Invitarte</span>
             </div>
@@ -595,27 +516,24 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
       </div>
       <div class="ficha">
         <span class="sello-tipo muestra">Diseño de muestra</span>
-        <span class="tipo-script">Matrimonio</span>
-        <h3>Valeria &amp; Tomás · Una boda entre viñedos</h3>
-        <p>Fotografía de la pareja, papel marfil y detalles dorados. Todo lo que tus invitados necesitan saber del día, en un solo enlace elegante.</p>
-        <ul class="lista oro">
-          <li><svg><use href="#i-check"/></svg><span>Ceremonia, recepción e itinerario de la noche</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Mesa de regalos o datos de transferencia</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Confirmación por invitado con número de pases</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Galería para que los invitados suban sus fotos</span></li>
+        <h3>Boda de Valeria y Tomás</h3>
+        <p>Foto de la pareja, papel marfil y detalles dorados. Todo el día en un enlace.</p>
+        <ul class="lista si">
+          <li><svg><use href="#i-check"/></svg><span>Ceremonia, recepción e itinerario</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Mesa de regalos con botón copiar</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Confirmación con número de pases</span></li>
         </ul>
-        <p class="pista"><svg><use href="#i-mano"/></svg>Desliza dentro del celular para ver la invitación completa</p>
-        <div class="acciones"><a class="btn btn-oro" href="#planes" data-evento="Matrimonio">Quiero una así</a></div>
+        <p class="pista"><svg><use href="#i-mano"/></svg>Desliza dentro del celular</p>
+        <div class="acciones"><a class="btn btn-cta" data-wa="Hola, quiero una invitación de matrimonio como el ejemplo de Valeria y Tomás." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Quiero una así</a></div>
       </div>
     </div>
 
-    <!-- Baby shower -->
     <div class="vitrina" role="tabpanel" id="pan-baby" aria-labelledby="tab-baby" hidden>
       <div class="montaje">
-        <img class="foto" src="img/baby-foto.jpg" alt="Futura mamá sosteniendo un celular con la invitación de baby shower de un osito">
+        <img class="foto" src="img/baby-foto.jpg" alt="Futura mamá con un celular que muestra una invitación de baby shower">
         <div class="phone"><div class="screen">
           <div class="mi t-baby" data-fecha="2026-12-12T16:00">
-            <img class="portada" src="img/baby-portada.jpg" alt="Portada: Baby shower de Martina, viene en camino">
+            <img class="portada" src="img/baby-portada.jpg" alt="Portada: Baby shower de Martina">
             <div class="cuerpo">
               <div class="bloque"><span class="lbl">Faltan para celebrar</span><div class="cd"></div></div>
               <div class="bloque"><span class="tit">Te esperamos</span>
@@ -626,7 +544,6 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
               <div class="bloque"><span class="tit">Ideas de regalo</span>
                 <div class="fila"><span>Pañales</span><b>Talla RN y 1</b></div>
                 <div class="fila"><span>Ropita</span><b>0 a 3 meses</b></div>
-                <div class="fila"><span>Colores</span><b>Salvia, crema y rosa</b></div>
               </div>
               <div class="bloque" data-rsvp><span class="tit">¿Vienes a celebrar?</span><div class="bts"><button class="mb" type="button" data-si>¡Sí, voy!</button><button class="mb sec2" type="button" data-no>No podré</button></div></div>
               <span class="pie">Diseño de muestra · Invitarte</span>
@@ -636,27 +553,24 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
       </div>
       <div class="ficha">
         <span class="sello-tipo muestra">Diseño de muestra</span>
-        <span class="tipo-script">Baby shower</span>
-        <h3>Martina viene en camino</h3>
-        <p>Acuarela suave, osito en una nube y colores pastel. Una invitación tierna que también ordena los regalos, para que no lleguen diez pijamas iguales.</p>
-        <ul class="lista oro">
-          <li><svg><use href="#i-check"/></svg><span>Cuenta regresiva para el gran día</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Lista de ideas de regalo, tallas y colores</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Mensajes de cariño para la futura mamá</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Confirmación para calcular comida y recuerdos</span></li>
+        <h3>Baby shower de Martina</h3>
+        <p>Acuarela suave y un osito en una nube. Ordena los regalos para que no se repitan.</p>
+        <ul class="lista si">
+          <li><svg><use href="#i-check"/></svg><span>Ideas de regalo con tallas</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Mensajes para la futura mamá</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Confirmación para calcular comida</span></li>
         </ul>
-        <p class="pista"><svg><use href="#i-mano"/></svg>Desliza dentro del celular para ver la invitación completa</p>
-        <div class="acciones"><a class="btn btn-oro" href="#planes" data-evento="Baby shower">Quiero una así</a></div>
+        <p class="pista"><svg><use href="#i-mano"/></svg>Desliza dentro del celular</p>
+        <div class="acciones"><a class="btn btn-cta" data-wa="Hola, quiero una invitación de baby shower como el ejemplo de Martina." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Quiero una así</a></div>
       </div>
     </div>
 
-    <!-- Revelación -->
     <div class="vitrina" role="tabpanel" id="pan-rev" aria-labelledby="tab-rev" hidden>
       <div class="montaje">
-        <img class="foto" src="img/rev-foto.jpg" alt="Pareja sosteniendo un celular con la invitación de revelación de sexo en una fiesta con globos rosados y celestes">
+        <img class="foto" src="img/rev-foto.jpg" alt="Pareja con un celular que muestra una invitación de revelación de sexo">
         <div class="phone"><div class="screen">
           <div class="mi t-rev" data-fecha="2026-12-05T17:00">
-            <img class="portada" src="img/rev-portada.jpg" alt="Portada: Revelación de sexo, ¿niño o niña?, Camila y Diego">
+            <img class="portada" src="img/rev-portada.jpg" alt="Portada: ¿Niño o niña? Camila y Diego">
             <div class="cuerpo">
               <div class="bloque"><span class="lbl">La gran revelación en</span><div class="cd"></div></div>
               <div class="bloque" data-voto><span class="tit">¿Cuál es tu apuesta?</span>
@@ -679,29 +593,26 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
       </div>
       <div class="ficha">
         <span class="sello-tipo muestra">Diseño de muestra</span>
-        <span class="tipo-script">Revelación de sexo</span>
-        <h3>Camila &amp; Diego · ¿Niño o niña?</h3>
-        <p>Globos rosados y celestes, un gran signo de pregunta dorado y un juego: los invitados votan su apuesta y ven el marcador en vivo. La emoción empieza antes de la fiesta.</p>
-        <ul class="lista oro">
-          <li><svg><use href="#i-check"/></svg><span>Votación “¿niño o niña?” con resultados en vivo</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Cuenta regresiva para el momento de la revelación</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Código de vestimenta según la apuesta</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Galería para subir el video del gran momento</span></li>
+        <h3>¿Niño o niña? Camila y Diego</h3>
+        <p>Tus invitados votan su apuesta y ven el marcador en vivo antes de la fiesta.</p>
+        <ul class="lista si">
+          <li><svg><use href="#i-check"/></svg><span>Votación con resultados en vivo</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Cuenta regresiva a la revelación</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Galería para el video del momento</span></li>
         </ul>
-        <p class="pista"><svg><use href="#i-mano"/></svg>Vota dentro del celular y mira cómo cambia el marcador</p>
-        <div class="acciones"><a class="btn btn-oro" href="#planes" data-evento="Revelación de sexo">Quiero una así</a></div>
+        <p class="pista"><svg><use href="#i-mano"/></svg>Vota dentro del celular</p>
+        <div class="acciones"><a class="btn btn-cta" data-wa="Hola, quiero una invitación de revelación de sexo como el ejemplo de Camila y Diego." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Quiero una así</a></div>
       </div>
     </div>
 
-    <!-- Primer añito -->
     <div class="vitrina" role="tabpanel" id="pan-bebe" aria-labelledby="tab-bebe" hidden>
       <div class="montaje">
-        <img class="foto" src="img/bebe-foto.jpg" alt="Celular con invitación de primer cumpleaños de animalitos de la selva sobre una mesa con cupcakes">
+        <img class="foto" src="img/bebe-foto.jpg" alt="Celular con invitación de primer cumpleaños de animalitos sobre una mesa con cupcakes">
         <div class="phone"><div class="screen">
           <div class="mi t-bebe" data-fecha="2027-01-09T15:00">
             <img class="portada" src="img/bebe-portada.jpg" alt="Portada: Mi primer añito, Emilia cumple 1">
             <div class="cuerpo">
-              <div class="bloque"><span class="lbl">La fiesta en la selva empieza en</span><div class="cd"></div></div>
+              <div class="bloque"><span class="lbl">La fiesta empieza en</span><div class="cd"></div></div>
               <div class="bloque"><span class="tit">¡Ven a jugar!</span>
                 <div class="fila"><span>Día</span><b>Sábado 9 de enero</b></div>
                 <div class="fila"><span>Hora</span><b>15:00 a 18:00</b></div>
@@ -719,73 +630,61 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
       </div>
       <div class="ficha">
         <span class="sello-tipo muestra">Diseño de muestra</span>
-        <span class="tipo-script">Primer añito</span>
-        <h3>Emilia cumple 1 · Fiesta en la selva</h3>
-        <p>Estilo dibujo animado en 3D con animalitos originales, colores alegres y letras gorditas. Perfecta para bautizos, primer añito y cumpleaños de los más pequeños.</p>
-        <ul class="lista oro">
-          <li><svg><use href="#i-check"/></svg><span>Personajes originales en la temática que elijas</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Confirmación con número de niños y adultos</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Código de disfraz y datos del lugar</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Álbum de fotos del cumpleaños para la familia</span></li>
+        <h3>Emilia cumple 1: fiesta en la selva</h3>
+        <p>Dibujos animados con animalitos originales. Ideal para bautizos y primer añito.</p>
+        <ul class="lista si">
+          <li><svg><use href="#i-check"/></svg><span>Personajes originales de tu temática</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Confirmación con número de niños</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Álbum de fotos para la familia</span></li>
         </ul>
-        <p class="pista"><svg><use href="#i-mano"/></svg>Desliza dentro del celular para ver la invitación completa</p>
-        <div class="acciones"><a class="btn btn-oro" href="#planes" data-evento="Primer añito / infantil">Quiero una así</a></div>
+        <p class="pista"><svg><use href="#i-mano"/></svg>Desliza dentro del celular</p>
+        <div class="acciones"><a class="btn btn-cta" data-wa="Hola, quiero una invitación de primer añito como el ejemplo de Emilia." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Quiero una así</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Prueba: clientes felices -->
-<section class="sec" id="clientes" style="padding-top:0">
+<section class="sec" id="clientes">
   <div class="w">
-    <div class="sec-head revela">
+    <div class="sec-head">
       <p class="eyebrow">Clientes felices</p>
-      <h2>Familias que ya <em>lo vivieron</em></h2>
-      <p class="lead">Resultados reales, sacados directamente del panel de cada evento.</p>
+      <h2>Familias que ya lo vivieron</h2>
     </div>
     <div class="casos">
-      <article class="caso revela">
+      <article class="caso">
         <img src="img/sara-foto.jpg" alt="">
         <div class="txt">
           <h3>XV años de Sara Valentina</h3>
-          <dl>
-            <dt>Querían</dt><dd>Algo elegante, nada infantil, y saber exactamente quién asistía.</dd>
-            <dt>Recibieron</dt><dd>Invitación con música, relato, enlace personal por familia y panel de control.</dd>
-          </dl>
-          <div class="cifras"><div><b>57</b><small>familias con enlace personal</small></div><div><b>+110</b><small>personas registradas</small></div><div><b>+30</b><small>felicitaciones</small></div></div>
+          <p>Querían algo elegante y saber exactamente quién asistía.</p>
+          <div class="cifras"><div><b>57</b><small>familias invitadas</small></div><div><b>+110</b><small>personas registradas</small></div><div><b>+30</b><small>felicitaciones</small></div></div>
         </div>
       </article>
-      <article class="caso revela">
+      <article class="caso">
         <img src="img/valen-foto.jpg" alt="">
         <div class="txt">
           <h3>Cumpleaños 4 de Valentín</h3>
-          <dl>
-            <dt>Querían</dt><dd>Que los invitados sintieran que llegaban a una película de superhéroes.</dd>
-            <dt>Recibieron</dt><dd>Videos cinematográficos, música épica, confirmación simple y QR para fotos.</dd>
-          </dl>
-          <div class="cifras"><div><b>+15</b><small>mensajes al cumpleañero</small></div><div><b>+20</b><small>fotos y videos subidos</small></div><div><b>1</b><small>enlace para todo WhatsApp</small></div></div>
+          <p>Querían que los invitados sintieran que llegaban a una película.</p>
+          <div class="cifras"><div><b>+15</b><small>mensajes</small></div><div><b>+20</b><small>fotos y videos</small></div><div><b>1</b><small>enlace para todos</small></div></div>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- DESEO: panel de invitados -->
-<section class="sec" id="panel" style="padding-top:0">
+<section class="sec band-cielo" id="panel">
   <div class="w panel-grid">
-    <div class="revela" style="display:grid;gap:22px;min-width:0">
-      <p class="eyebrow">Exclusivo del Pack Total</p>
-      <h2 class="h2">Tu propio <em>panel de invitados</em></h2>
-      <p class="lead">Creas a cada familia con su nombre y sus pases, y el sistema le genera un enlace personal para enviar por WhatsApp. Cuando confirma, el conteo se actualiza solo.</p>
-      <ul class="lista oro">
-        <li><svg><use href="#i-link"/></svg><span>Enlace personal por invitado, con saludo y pases asignados</span></li>
-        <li><svg><use href="#i-panel"/></svg><span>Confirmados, pendientes y total de personas en tiempo real</span></li>
-        <li><svg><use href="#i-foto"/></svg><span>Descarga de todas las felicitaciones, fotos y videos</span></li>
-        <li><svg><use href="#i-rsvp"/></svg><span>Resumen diario de confirmaciones a tu correo</span></li>
+    <div style="display:grid;gap:18px;min-width:0">
+      <p class="eyebrow" style="color:var(--cielo)">Incluido en el Pack Total</p>
+      <h2 class="h2">Tu panel para saber quién viene</h2>
+      <p class="lead">Creas cada familia con sus pases y te da su enlace para WhatsApp. Cuando confirman, se cuenta solo.</p>
+      <ul class="lista si">
+        <li><svg><use href="#i-check"/></svg><span>Enlace personal por invitado</span></li>
+        <li><svg><use href="#i-check"/></svg><span>Total de personas en tiempo real</span></li>
+        <li><svg><use href="#i-check"/></svg><span>Descarga de fotos y mensajes</span></li>
       </ul>
-      <p style="color:var(--bruma);font-size:.92rem">Pruébalo aquí: escribe un nombre y crea un invitado.</p>
+      <p class="pista"><svg><use href="#i-mano"/></svg>Pruébalo: escribe un nombre y crea un invitado</p>
     </div>
-    <div class="ventana revela" aria-label="Demostración del panel de invitados">
+    <div class="ventana" aria-label="Demostración del panel de invitados">
       <div class="barra"><i></i><i></i><i></i><span>tuevento.com/panel</span></div>
       <div class="cuerpo">
         <span class="demo-tag">Demostración · datos de ejemplo</span>
@@ -798,7 +697,7 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
         <form class="crear" id="demoForm">
           <input id="demoNombre" type="text" placeholder="Nombre de la familia" aria-label="Nombre de la familia" maxlength="40">
           <input id="demoPases" type="number" min="1" max="12" value="2" aria-label="Pases">
-          <button type="submit">+ Crear invitado</button>
+          <button type="submit">+ Crear</button>
         </form>
         <div class="tabla-wrap">
           <table>
@@ -811,143 +710,121 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
   </div>
 </section>
 
-<!-- OFERTA: pila de valor -->
-<section class="sec papel" id="oferta">
+<section class="sec band-oro" id="oferta">
   <div class="w">
-    <div class="sec-head centro revela">
-      <p class="eyebrow">La oferta completa</p>
-      <h2>Todo lo que recibes con el <em>Pack Total</em></h2>
-      <p class="lead">Si contrataras cada parte por separado (diseñador, programador, sistema de confirmaciones y álbum) pagarías mucho más. Aquí va todo junto, hecho a tu medida.</p>
+    <div class="sec-head centro">
+      <p class="eyebrow" style="color:var(--oro)">La oferta</p>
+      <h2>Todo lo que recibes con el Pack Total</h2>
     </div>
-    <div class="pila revela">
-      <div class="item"><svg><use href="#i-cel"/></svg><span><b>Diseño exclusivo de tu invitación</b><small>Tu temática, tus fotos y tus colores, desde cero</small></span><span class="v">USD 120</span></div>
-      <div class="item"><svg><use href="#i-musica"/></svg><span><b>Página web con música y animaciones</b><small>Cuenta regresiva, mapa, vestimenta y datos de regalo</small></span><span class="v">USD 90</span></div>
-      <div class="item"><svg><use href="#i-rsvp"/></svg><span><b>Sistema de confirmación de asistencia</b><small>Tus invitados responden con un toque</small></span><span class="v">USD 60</span></div>
-      <div class="item"><svg><use href="#i-foto"/></svg><span><b>Galería de fotos y muro de mensajes</b><small>El álbum de la fiesta, armado por tus invitados</small></span><span class="v">USD 60</span></div>
-      <div class="item"><svg><use href="#i-panel"/></svg><span><b>Panel de invitados con enlaces personales</b><small>Pases, estados y total de personas en tiempo real</small></span><span class="v">USD 120</span></div>
-      <div class="item bono"><svg><use href="#i-qr"/></svg><span><b>Código QR listo para imprimir</b><small>Para las mesas: los invitados suben fotos durante la fiesta</small></span><span class="v">USD 25</span></div>
-      <div class="item bono"><svg><use href="#i-foto"/></svg><span><b>Imagen para estados de WhatsApp e Instagram</b><small>Anuncia tu evento con el mismo diseño</small></span><span class="v">USD 20</span></div>
-      <div class="item bono"><svg><use href="#i-chat"/></svg><span><b>Mensaje listo para enviar a tus invitados</b><small>Texto probado para que abran y confirmen</small></span><span class="v">USD 15</span></div>
+    <div class="pila">
+      <div class="item"><svg><use href="#i-check"/></svg><span><b>Diseño exclusivo de tu invitación</b><small>Tu temática, tus fotos, tus colores</small></span><span class="v">USD 120</span></div>
+      <div class="item"><svg><use href="#i-check"/></svg><span><b>Página con música y animaciones</b><small>Cuenta regresiva, mapa y datos de regalo</small></span><span class="v">USD 90</span></div>
+      <div class="item"><svg><use href="#i-check"/></svg><span><b>Confirmación de asistencia</b><small>Responden con un toque</small></span><span class="v">USD 60</span></div>
+      <div class="item"><svg><use href="#i-check"/></svg><span><b>Galería de fotos y muro de mensajes</b><small>El álbum lo arman tus invitados</small></span><span class="v">USD 60</span></div>
+      <div class="item"><svg><use href="#i-check"/></svg><span><b>Panel de invitados</b><small>Enlaces personales y conteo en vivo</small></span><span class="v">USD 120</span></div>
+      <div class="item bono"><svg><use href="#i-gift"/></svg><span><b><span class="tag">BONO</span>Código QR para imprimir</b><small>Para subir fotos durante la fiesta</small></span><span class="v">USD 25</span></div>
+      <div class="item bono"><svg><use href="#i-gift"/></svg><span><b><span class="tag">BONO</span>Imagen para estados e Instagram</b><small>Anuncia tu evento con el mismo diseño</small></span><span class="v">USD 20</span></div>
+      <div class="item bono"><svg><use href="#i-gift"/></svg><span><b><span class="tag">BONO</span>Mensaje listo para tus invitados</b><small>Para que abran y confirmen</small></span><span class="v">USD 15</span></div>
       <div class="total">
         <small>Valor total</small>
         <s>USD 510</s>
-        <small>Hoy lo tienes todo por</small>
+        <small>Hoy pagas solo</small>
         <b>USD 230</b>
-        <small>Pago único · sin mensualidades</small>
-        <a class="btn btn-oro" href="#pedir" data-pack="Pack Total" style="margin-top:12px">Reservar el Pack Total</a>
+        <small>Pago único, sin mensualidades</small>
+        <a class="btn btn-cta btn-grande" data-wa="Hola, quiero reservar el Pack Total (USD 230) para mi invitación." target="_blank" rel="noopener" style="margin-top:14px"><svg><use href="#i-wa"/></svg>Reservar el Pack Total</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Garantía -->
-<section class="sec">
+<section class="sec" style="padding-bottom:0">
   <div class="w">
-    <div class="garantia revela">
-      <div class="medalla"><span><b>100%</b>Garantía<br>de amor</span></div>
-      <div style="display:grid;gap:14px">
-        <p class="eyebrow">Cero riesgo para ti</p>
-        <h2>Garantía de <em>amor al primer diseño</em></h2>
-        <p>Si la primera versión de tu invitación no te enamora, la rediseñamos desde cero sin costo extra. No tienes que conformarte con algo que no te encanta.</p>
+    <div class="garantia">
+      <div class="medalla"><span><b>100%</b>GARANTÍA</span></div>
+      <div style="display:grid;gap:10px">
+        <h2>Garantía de amor al primer diseño</h2>
+        <p>Si la primera versión no te enamora, la rediseñamos desde cero sin costo extra.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Planes -->
-<section class="sec papel" id="planes">
+<section class="sec" id="planes">
   <div class="w">
-    <div class="sec-head centro revela">
-      <p class="eyebrow">Elige tu plan</p>
-      <h2>Tres formas de recibir a tus invitados, <em>una sola fiesta inolvidable</em></h2>
-      <p class="lead">Cada plan incluye todo lo del anterior. Al reservar te derivamos a nuestro WhatsApp para coordinar el pago y empezar tu diseño.</p>
+    <div class="sec-head centro">
+      <p class="eyebrow">Precios</p>
+      <h2>Elige tu plan y reserva por WhatsApp</h2>
+      <p class="lead">Cada plan incluye todo lo del anterior.</p>
     </div>
     <div class="planes">
-      <article class="plan revela">
+      <article class="plan">
         <h3>Esencial</h3>
-        <p class="para">Para lucir tu evento con una invitación bonita y clara.</p>
-        <div class="precio"><span class="antes">Valor <s>USD 130</s></span><div><b>$80</b><small>USD · pago único</small></div></div>
+        <p class="para">Una invitación bonita y clara.</p>
+        <div class="precio"><span class="antes">Valor <s>USD 130</s></span><div><b>$80</b><small>USD</small></div></div>
         <ul>
-          <li><svg><use href="#i-check"/></svg><span>Landing personalizada con tus imágenes</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Portada con nombre, fecha y temática</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Fecha, hora, lugar y código de vestimenta</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Botón “Cómo llegar” con el mapa</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Botón de WhatsApp para dudas</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Enlace para compartir con vista previa</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Diseño con tus imágenes</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Fecha, hora, lugar y vestimenta</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Botón “Cómo llegar”</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Botón de WhatsApp</span></li>
           <li><svg><use href="#i-check"/></svg><span>Hasta 3 cambios</span></li>
-          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: mensaje listo para tus invitados</span></li>
+          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: mensaje para invitados</span></li>
         </ul>
-        <div class="upsell"><svg><use href="#i-up"/></svg><span>Por <b>USD 70 más</b> sumas música, cuenta regresiva, confirmación, galería y muro de mensajes.</span></div>
-        <a class="btn btn-plan" href="#pedir" data-pack="Esencial">Reservar Esencial</a>
-        <p class="limite">Ideal si solo necesitas informar</p>
+        <div class="upsell"><svg><use href="#i-up"/></svg><span>Por <b>USD 70 más</b> tienes música, confirmación y galería.</span></div>
+        <a class="btn btn-borde" data-wa="Hola, quiero reservar el plan Esencial (USD 80) para mi invitación." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Reservar Esencial</a>
       </article>
 
-      <article class="plan dest revela">
+      <article class="plan dest">
         <span class="cinta">El más elegido</span>
         <h3>Premium</h3>
-        <p class="para">La experiencia completa que vivieron los invitados de Sara.</p>
-        <div class="precio"><span class="antes">Valor <s>USD 280</s></span><div><b>$150</b><small>USD · pago único</small></div></div>
+        <p class="para">La experiencia completa, como la de Sara.</p>
+        <div class="precio"><span class="antes">Valor <s>USD 280</s></span><div><b>$150</b><small>USD</small></div></div>
         <ul>
-          <li class="base"><svg><use href="#i-check"/></svg><span>Todo lo del plan Esencial, más:</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Música de fondo con tu canción</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Animaciones y efectos a medida</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Cuenta regresiva en vivo</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Confirmación de asistencia en línea</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Muro de felicitaciones con foto</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Galería: los invitados suben fotos y videos</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Datos de regalo con botón para copiar</span></li>
-          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: imagen para estados de WhatsApp e Instagram</span></li>
+          <li class="base"><svg><use href="#i-check"/></svg><span>Todo lo del Esencial, más:</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Música con tu canción</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Animaciones a medida</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Cuenta regresiva</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Confirmación de asistencia</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Muro de mensajes y galería</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Datos de regalo con botón copiar</span></li>
+          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: imagen para estados</span></li>
         </ul>
-        <div class="upsell"><svg><use href="#i-up"/></svg><span>Por <b>USD 80 más</b> controlas a cada invitado desde tu propio panel.</span></div>
-        <a class="btn btn-oro" href="#pedir" data-pack="Premium">Reservar Premium</a>
-        <p class="limite">La mejor relación entre precio y experiencia</p>
+        <div class="upsell"><svg><use href="#i-up"/></svg><span>Por <b>USD 80 más</b> controlas a cada invitado.</span></div>
+        <a class="btn btn-cta" data-wa="Hola, quiero reservar el plan Premium (USD 150) para mi invitación." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Reservar Premium</a>
       </article>
 
-      <article class="plan revela">
+      <article class="plan">
         <h3>Pack Total</h3>
-        <p class="para">Todo bajo control, de la invitación al último invitado.</p>
-        <div class="precio"><span class="antes">Valor <s>USD 510</s></span><div><b>$230</b><small>USD · pago único</small></div></div>
+        <p class="para">Todo bajo control, hasta el último invitado.</p>
+        <div class="precio"><span class="antes">Valor <s>USD 510</s></span><div><b>$230</b><small>USD</small></div></div>
         <ul>
-          <li class="base"><svg><use href="#i-check"/></svg><span>Todo lo del plan Premium, más:</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Panel privado de invitados con clave</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Enlace personal por familia, con sus pases</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Conteo de asistentes en tiempo real</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Descarga de mensajes, fotos y videos</span></li>
-          <li class="sube"><svg><use href="#i-plus"/></svg><span>Resumen diario por correo</span></li>
-          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: código QR listo para imprimir</span></li>
-          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: todos los bonos anteriores</span></li>
+          <li class="base"><svg><use href="#i-check"/></svg><span>Todo lo del Premium, más:</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Panel de invitados con clave</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Enlace personal con pases</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Conteo en tiempo real</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Descarga de fotos y mensajes</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Resumen diario por correo</span></li>
+          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: QR para imprimir + todos los bonos</span></li>
         </ul>
-        <div class="upsell"><svg><use href="#i-check"/></svg><span>Lo mismo que usaron las familias de Sara y Valentín.</span></div>
-        <a class="btn btn-plan" href="#pedir" data-pack="Pack Total">Reservar Pack Total</a>
-        <p class="limite">Para eventos con muchos invitados</p>
+        <div class="upsell"><svg><use href="#i-check"/></svg><span>Lo que usaron Sara y Valentín.</span></div>
+        <a class="btn btn-borde" data-wa="Hola, quiero reservar el Pack Total (USD 230) para mi invitación." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Reservar Pack Total</a>
       </article>
     </div>
 
-    <details class="comparar revela">
-      <summary>Comparar los tres planes</summary>
+    <details class="comparar">
+      <summary>Comparar planes</summary>
       <div class="cmp-wrap">
         <table class="cmp">
-          <thead><tr><th>Incluye</th><th>Esencial<br>$80</th><th>Premium<br>$150</th><th>Pack Total<br>$230</th></tr></thead>
+          <thead><tr><th>Incluye</th><th>Esencial</th><th>Premium</th><th>Pack Total</th></tr></thead>
           <tbody>
-            <tr class="grupo"><td colspan="4">La invitación</td></tr>
-            <tr><td>Diseño personalizado con tus imágenes</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Datos del evento, mapa y WhatsApp</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Música de fondo y animaciones</td><td class="no-inc">—</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Diseño con tus imágenes</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Datos, mapa y WhatsApp</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Música y animaciones</td><td class="no-inc">—</td><td class="si">✓</td><td class="si">✓</td></tr>
             <tr><td>Cuenta regresiva</td><td class="no-inc">—</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr class="grupo"><td colspan="4">Tus invitados</td></tr>
-            <tr><td>Confirmación de asistencia en línea</td><td class="no-inc">—</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Muro de felicitaciones y galería de fotos</td><td class="no-inc">—</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Datos de regalo con botón copiar</td><td class="no-inc">—</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr class="grupo"><td colspan="4">Control total</td></tr>
-            <tr><td>Panel de invitados con enlace personal y pases</td><td class="no-inc">—</td><td class="no-inc">—</td><td class="si">✓</td></tr>
-            <tr><td>Conteo en tiempo real y resumen por correo</td><td class="no-inc">—</td><td class="no-inc">—</td><td class="si">✓</td></tr>
-            <tr><td>Descarga de mensajes, fotos y videos</td><td class="no-inc">—</td><td class="no-inc">—</td><td class="si">✓</td></tr>
-            <tr class="grupo"><td colspan="4">Bonos</td></tr>
-            <tr><td>Mensaje listo para tus invitados</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Imagen para estados e Instagram</td><td class="no-inc">—</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Código QR para imprimir</td><td class="no-inc">—</td><td class="no-inc">—</td><td class="si">✓</td></tr>
-            <tr class="grupo"><td colspan="4">Garantía</td></tr>
-            <tr><td>Rediseño sin costo si el primero no te enamora</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Confirmación de asistencia</td><td class="no-inc">—</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Muro de mensajes y galería</td><td class="no-inc">—</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Panel de invitados y enlaces personales</td><td class="no-inc">—</td><td class="no-inc">—</td><td class="si">✓</td></tr>
+            <tr><td>Descargas y resumen por correo</td><td class="no-inc">—</td><td class="no-inc">—</td><td class="si">✓</td></tr>
+            <tr><td>Garantía de amor al primer diseño</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
           </tbody>
         </table>
       </div>
@@ -955,80 +832,64 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
   </div>
 </section>
 
-<!-- Después de reservar -->
-<section class="sec">
+<section class="sec band-rosa">
   <div class="w">
-    <div class="sec-head revela">
-      <p class="eyebrow">Qué pasa después de reservar</p>
-      <h2>Te llevamos de la mano <em>hasta el día de la fiesta</em></h2>
+    <div class="sec-head centro">
+      <p class="eyebrow">Después de reservar</p>
+      <h2>Así de simple</h2>
     </div>
-    <div class="ruta revela">
-      <div><span>Paso uno</span><h3>Reservas tu plan</h3><p>Llenas el formulario y te derivamos a nuestro WhatsApp.</p></div>
-      <div><span>Paso dos</span><h3>Coordinamos el pago</h3><p>Te indicamos cómo pagar y apartamos tu fecha.</p></div>
-      <div><span>Paso tres</span><h3>Nos mandas tus datos</h3><p>Fecha, lugar, fotos y canción. Te decimos exactamente qué enviar.</p></div>
-      <div><span>Paso cuatro</span><h3>Revisas y apruebas</h3><p>Recibes tu enlace de prueba y ajustamos los detalles contigo.</p></div>
-      <div><span>Paso cinco</span><h3>La compartes</h3><p>Envías tu enlace por WhatsApp y miras cómo llegan las confirmaciones.</p></div>
+    <div class="ruta">
+      <div><h3>Nos escribes</h3><p>Tocas “Reservar” y se abre nuestro WhatsApp.</p></div>
+      <div><h3>Coordinamos el pago</h3><p>Te indicamos cómo pagar y apartamos tu fecha.</p></div>
+      <div><h3>Mandas tus datos</h3><p>Fotos, fecha, lugar y canción. Te decimos qué enviar.</p></div>
+      <div><h3>La compartes</h3><p>Revisas, ajustamos y la envías a tus invitados.</p></div>
     </div>
   </div>
 </section>
 
-<!-- Preguntas -->
-<section class="sec" id="preguntas" style="padding-top:0">
+<section class="sec" id="preguntas">
   <div class="w">
-    <div class="sec-head revela">
-      <p class="eyebrow">Preguntas frecuentes</p>
-      <h2>Para que no te quede <em>ninguna duda</em></h2>
+    <div class="sec-head centro">
+      <p class="eyebrow">Preguntas</p>
+      <h2>Resolvemos tus dudas</h2>
     </div>
-    <div class="faq revela">
-      <details><summary>¿Mis invitados tienen que descargar algo?</summary><p>No. Es una página web: la abren tocando el enlace en WhatsApp, desde cualquier celular o computador.</p></details>
-      <details><summary>¿Funciona en iPhone y Android?</summary><p>Sí. Las invitaciones de Sara y Valentín se probaron en iPhone y Android, incluida la subida de fotos y videos desde el celular.</p></details>
-      <details><summary>No sé nada de tecnología, ¿igual puedo?</summary><p>Sí. Tú solo nos mandas fotos y datos por WhatsApp. Nosotros diseñamos, programamos y publicamos. Si eliges el Pack Total, te explicamos el panel paso a paso.</p></details>
-      <details><summary>¿Con cuánta anticipación debo pedirla?</summary><p>Lo ideal es enviarla a tus invitados entre 4 y 6 semanas antes del evento, para que todos alcancen a confirmar. Escríbenos con tiempo y apartamos tu fecha.</p></details>
-      <details><summary>¿Qué pasa si cambia la hora o el lugar?</summary><p>Actualizamos la invitación y el mismo enlace muestra el dato nuevo. No tienes que reenviar nada.</p></details>
-      <details><summary>¿Puedo usar personajes de películas o caricaturas?</summary><p>Creamos personajes y dibujos originales inspirados en la temática que elijas, para que tu invitación se vea única y se pueda compartir sin problemas.</p></details>
-      <details><summary>¿Cómo pago?</summary><p>Al reservar te derivamos a nuestro WhatsApp, donde te indicamos los medios de pago disponibles y apartamos tu fecha.</p></details>
-      <details><summary>¿Puedo empezar con un plan y subir después?</summary><p>Sí. Puedes empezar con Esencial o Premium y pasar al plan siguiente pagando solo la diferencia.</p></details>
+    <div class="faq">
+      <details><summary>¿Mis invitados tienen que descargar algo?</summary><p>No. Abren el enlace desde WhatsApp en cualquier celular.</p></details>
+      <details><summary>¿Funciona en iPhone y Android?</summary><p>Sí, en los dos. Incluso la subida de fotos y videos.</p></details>
+      <details><summary>No sé de tecnología, ¿igual puedo?</summary><p>Sí. Tú nos mandas fotos y datos por WhatsApp; nosotros hacemos todo lo demás.</p></details>
+      <details><summary>¿Con cuánta anticipación la pido?</summary><p>Lo ideal es enviarla 4 a 6 semanas antes del evento. Escríbenos con tiempo para apartar tu fecha.</p></details>
+      <details><summary>¿Y si cambia la hora o el lugar?</summary><p>La actualizamos y el mismo enlace muestra el dato nuevo.</p></details>
+      <details><summary>¿Puedo usar personajes de películas?</summary><p>Creamos personajes originales inspirados en tu temática, para que puedas compartirla sin problemas.</p></details>
+      <details><summary>¿Cómo pago?</summary><p>Por WhatsApp te indicamos los medios de pago disponibles.</p></details>
+      <details><summary>¿Puedo subir de plan después?</summary><p>Sí, pagando solo la diferencia.</p></details>
     </div>
   </div>
 </section>
 
-<!-- Dos caminos -->
-<section class="sec" style="padding-top:0">
-  <div class="w">
-    <div class="sec-head centro revela"><p class="eyebrow">Ahora decides tú</p><h2>Tienes <em>dos caminos</em></h2></div>
-    <div class="caminos revela">
-      <div class="camino a"><h3>Seguir como siempre</h3><p>Mandar una imagen por WhatsApp, perseguir confirmaciones una por una, adivinar cuántos llegan y juntar las fotos de a poco después de la fiesta.</p></div>
-      <div class="camino b"><h3>Elegir Invitarte</h3><p>Una invitación que emociona desde el primer toque, confirma por ti, te dice cuántos vienen y guarda el recuerdo de la fiesta. Con garantía de amor al primer diseño.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ACCIÓN -->
 <section class="sec cierre" id="pedir">
   <div class="w">
-    <div class="sello" aria-hidden="true">R.S.V.P.</div>
-    <h2>Reserva hoy tu invitación <span class="script">inolvidable</span></h2>
-    <p class="lead" style="margin:0 auto">Completa estos datos y te derivamos a nuestro WhatsApp para coordinar el pago y empezar tu diseño.</p>
-    <form class="form" id="pedido" novalidate>
-      <label>Tu nombre<input id="fNombre" type="text" autocomplete="name" placeholder="Ej.: Carolina"></label>
-      <label>Tipo de evento
-        <select id="fEvento">
-          <option>XV años</option><option>Matrimonio</option><option>Baby shower</option><option>Revelación de sexo</option><option>Primer añito / infantil</option><option>Cumpleaños infantil</option><option>Cumpleaños adulto</option><option>Bautizo</option><option>Otro</option>
-        </select>
-      </label>
-      <label class="full">Fecha del evento<input id="fFecha" type="date"></label>
-      <div class="full" style="display:grid;gap:6px">
-        <span style="font-size:.85rem;color:var(--bruma)">Plan que quieres reservar</span>
-        <div class="packs" role="radiogroup" aria-label="Plan">
-          <label><input type="radio" name="pack" value="Esencial"><span>Esencial<small>USD 80</small></span></label>
-          <label><input type="radio" name="pack" value="Premium" checked><span>Premium<small>USD 150</small></span></label>
-          <label><input type="radio" name="pack" value="Pack Total"><span>Pack Total<small>USD 230</small></span></label>
-        </div>
+    <h2>¿Lista tu fiesta? Reserva tu invitación hoy</h2>
+    <p class="lead">Elige dos opciones y te escribimos por WhatsApp.</p>
+    <div class="elige">
+      <p>¿Qué celebras?</p>
+      <div class="pills" role="radiogroup" aria-label="Tipo de evento">
+        <label><input type="radio" name="ev" value="XV años" checked><span>XV años</span></label>
+        <label><input type="radio" name="ev" value="Matrimonio"><span>Matrimonio</span></label>
+        <label><input type="radio" name="ev" value="Baby shower"><span>Baby shower</span></label>
+        <label><input type="radio" name="ev" value="Revelación de sexo"><span>Revelación</span></label>
+        <label><input type="radio" name="ev" value="Cumpleaños infantil"><span>Cumpleaños infantil</span></label>
+        <label><input type="radio" name="ev" value="Primer añito"><span>Primer añito</span></label>
+        <label><input type="radio" name="ev" value="Otro evento"><span>Otro</span></label>
       </div>
-      <button class="btn btn-oro btn-grande" type="submit"><svg><use href="#i-wa"/></svg>Reservar y continuar en WhatsApp</button>
-      <div class="mensaje" id="fMensaje" hidden></div>
-      <p class="nota">Se abre WhatsApp con tu mensaje listo. Tú decides si lo envías.<br>O escríbenos directo al <b>+56 9 3882 6061</b></p>
-    </form>
+      <p>¿Qué plan quieres?</p>
+      <div class="pills" role="radiogroup" aria-label="Plan">
+        <label><input type="radio" name="pl" value="Esencial (USD 80)"><span>Esencial · $80</span></label>
+        <label><input type="radio" name="pl" value="Premium (USD 150)" checked><span>Premium · $150</span></label>
+        <label><input type="radio" name="pl" value="Pack Total (USD 230)"><span>Pack Total · $230</span></label>
+      </div>
+      <a class="btn btn-cta btn-grande" id="btnFinal" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Reservar por WhatsApp</a>
+      <p class="nota">O escríbenos al <b>+56 9 3882 6061</b></p>
+    </div>
   </div>
 </section>
 
@@ -1036,30 +897,40 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:
 
 <footer>
   <div class="w">
-    <span class="logo" style="font-size:1.6rem">Invitarte</span>
-    <span>Invitaciones web para momentos que se recuerdan · Santiago, Chile · WhatsApp <a href="https://wa.me/56938826061" target="_blank" rel="noopener">+56 9 3882 6061</a></span>
+    <span class="logo">Invit<span>arte</span></span>
+    <span>Santiago, Chile · WhatsApp <a href="https://wa.me/56938826061" target="_blank" rel="noopener">+56 9 3882 6061</a></span>
   </div>
 </footer>
 
 <div class="barra-movil" id="barraMovil">
-  <div><small>Invitaciones web desde</small><b>USD 80</b></div>
-  <a class="btn btn-oro" href="#planes">Reservar</a>
+  <div><small>Desde</small><b>USD 80</b></div>
+  <a class="btn btn-cta" data-wa="Hola, quiero información para una invitación web." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Escríbenos</a>
 </div>
 
 <script>
-/* ===== CONFIGURACIÓN: número de WhatsApp con código de país, sin + ni espacios ===== */
-const CONFIG = { whatsapp: "56938826061" };
+/* ===== Número de WhatsApp con código de país, sin + ni espacios ===== */
+const WHATSAPP = "56938826061";
+const wa = t => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+document.querySelectorAll('[data-wa]').forEach(a => a.href = wa(a.dataset.wa));
 
-document.documentElement.classList.add('js');
+/* Botón final: arma el mensaje con lo elegido */
+const btnFinal = document.getElementById('btnFinal');
+function armaFinal() {
+  const ev = document.querySelector('input[name="ev"]:checked').value;
+  const pl = document.querySelector('input[name="pl"]:checked').value;
+  btnFinal.href = wa(`Hola, quiero reservar el plan ${pl} para una invitación de ${ev}.`);
+}
+document.querySelectorAll('input[name="ev"],input[name="pl"]').forEach(i => i.addEventListener('change', armaFinal));
+armaFinal();
 
-/* Pantallas que rotan dentro de los celulares (ejemplos reales) */
+/* Pantallas que rotan (ejemplos reales) */
 document.querySelectorAll('[data-rota]').forEach((scr, n) => {
   const imgs = [...scr.querySelectorAll(':scope > img')];
   let i = 0;
   setInterval(() => { imgs[i].classList.remove('on'); i = (i + 1) % imgs.length; imgs[i].classList.add('on'); }, 3000 + n * 350);
 });
 
-/* Pestañas de la galería */
+/* Pestañas */
 const tabs = [...document.querySelectorAll('.tab')];
 function abrirTab(id) {
   tabs.forEach(t => {
@@ -1077,7 +948,6 @@ tabs.forEach((t, k) => {
     n.focus(); n.click();
   });
 });
-document.querySelectorAll('[data-ir]').forEach(a => a.addEventListener('click', () => abrirTab(a.dataset.ir)));
 
 /* Cuentas regresivas de las mini invitaciones */
 const cuentas = [...document.querySelectorAll('.mi[data-fecha]')].map(mi => {
@@ -1089,13 +959,13 @@ function tic() {
   const now = Date.now();
   cuentas.forEach(c => {
     const s = Math.max(0, Math.floor((c.t - now) / 1000));
-    const v = [Math.floor(s / 86400), Math.floor(s % 86400 / 3600), Math.floor(s % 3600 / 60), s % 60];
-    v.forEach((x, k) => c.b[k].textContent = k ? String(x).padStart(2, '0') : x);
+    [Math.floor(s / 86400), Math.floor(s % 86400 / 3600), Math.floor(s % 3600 / 60), s % 60]
+      .forEach((x, k) => c.b[k].textContent = k ? String(x).padStart(2, '0') : x);
   });
 }
 tic(); setInterval(tic, 1000);
 
-/* Interacciones dentro de las mini invitaciones */
+/* Interacciones de las mini invitaciones */
 document.querySelectorAll('[data-rsvp], [data-ninos]').forEach(b => {
   b.querySelectorAll('[data-si],[data-no]').forEach(btn => btn.addEventListener('click', () => {
     const si = btn.hasAttribute('data-si');
@@ -1134,14 +1004,6 @@ document.querySelectorAll('[data-voto]').forEach(b => {
   }));
 });
 
-/* Aparición suave al hacer scroll (el contenido es visible si no hay JS) */
-const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => {
-  es.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('espera'); io.unobserve(e.target); } });
-}, { rootMargin: '0px 0px -8% 0px' }) : null;
-if (io) document.querySelectorAll('.revela').forEach(el => {
-  if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('espera'); io.observe(el); }
-});
-
 /* Barra fija en celular */
 const barra = document.getElementById('barraMovil');
 const hero = document.querySelector('.hero');
@@ -1150,26 +1012,7 @@ addEventListener('scroll', () => {
   barra.classList.toggle('ver', hero.getBoundingClientRect().bottom < 0 && pedir.top > innerHeight * .6);
 }, { passive: true });
 
-/* Chispas doradas en el hero */
-(() => {
-  const c = document.getElementById('chispas'); if (!c) return;
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const x = c.getContext('2d'); let W, H; const pts = [];
-  function size() { W = c.width = c.offsetWidth * devicePixelRatio; H = c.height = c.offsetHeight * devicePixelRatio; }
-  size(); addEventListener('resize', size);
-  for (let k = 0; k < 46; k++) pts.push({ x: Math.random(), y: Math.random(), r: Math.random() * 1.6 + .4, s: Math.random() * .0006 + .0002, f: Math.random() * 6.28 });
-  (function loop(t) {
-    x.clearRect(0, 0, W, H);
-    pts.forEach(p => {
-      p.y -= p.s; if (p.y < -.02) { p.y = 1.02; p.x = Math.random(); }
-      x.beginPath(); x.arc(p.x * W, p.y * H, p.r * devicePixelRatio, 0, 6.28);
-      x.fillStyle = `rgba(231,196,127,${.35 + .35 * Math.sin(t / 700 + p.f)})`; x.fill();
-    });
-    requestAnimationFrame(loop);
-  })(0);
-})();
-
-/* Demo del panel de invitados */
+/* Demo del panel */
 (() => {
   const filas = [
     { n: 'Familia Rojas', p: 4, e: 'ok' }, { n: 'Tía Carmen', p: 2, e: 'ok' },
@@ -1204,36 +1047,6 @@ addEventListener('scroll', () => {
     setTimeout(() => { f.e = 'ok'; const p = tr.querySelector('.pill'); p.className = 'pill ok'; p.textContent = txt.ok; kpis(); }, 2600);
   });
 })();
-
-/* Botones que preseleccionan plan o tipo de evento en el formulario */
-document.querySelectorAll('[data-pack]').forEach(a => a.addEventListener('click', () => {
-  const r = document.querySelector(`input[name="pack"][value="${a.dataset.pack}"]`); if (r) r.checked = true;
-}));
-document.querySelectorAll('[data-evento]').forEach(a => a.addEventListener('click', () => {
-  document.getElementById('fEvento').value = a.dataset.evento;
-}));
-
-/* Formulario → WhatsApp */
-document.getElementById('pedido').addEventListener('submit', e => {
-  e.preventDefault();
-  const nombre = document.getElementById('fNombre').value.trim();
-  const evento = document.getElementById('fEvento').value;
-  const fecha = document.getElementById('fFecha').value;
-  const pack = (document.querySelector('input[name="pack"]:checked') || {}).value || 'Premium';
-  const fechaTxt = fecha ? new Date(fecha + 'T12:00').toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' }) : 'por definir';
-  const msg = `Hola, soy ${nombre || '(tu nombre)'}. Quiero reservar el plan ${pack} para una invitación de ${evento}, fecha ${fechaTxt}.`;
-  const a = document.createElement('a');
-  a.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`; a.target = '_blank'; a.rel = 'noopener';
-  document.body.appendChild(a); a.click(); a.remove();
-  const caja = document.getElementById('fMensaje');
-  caja.hidden = false;
-  caja.textContent = 'Si WhatsApp no se abrió, escríbenos al +56 9 3882 6061 con este mensaje:\n\n' + msg;
-  const b = document.createElement('button'); b.type = 'button'; b.className = 'btn btn-linea'; b.textContent = 'Copiar mensaje';
-  b.addEventListener('click', () => {
-    (navigator.clipboard ? navigator.clipboard.writeText(msg) : Promise.reject()).then(() => b.textContent = 'Copiado', () => b.textContent = 'Selecciona y copia el texto');
-  });
-  caja.appendChild(b);
-});
 </script>
 
 </body>
