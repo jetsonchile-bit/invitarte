@@ -279,6 +279,24 @@ tr.nuevo td{animation:brillo 1.6s ease}
 .upsell{display:flex;align-items:center;gap:10px;border-radius:12px;padding:11px 13px;font-size:.9rem;line-height:1.35;background:var(--cta-tint);color:var(--cta-tint-ink);font-weight:700}
 .upsell svg{width:18px;height:18px;flex:none}
 @media (max-width:980px){.planes{grid-template-columns:1fr;max-width:500px;margin:0 auto}.plan.dest{transform:none}}
+.ficha-plan{margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--surface-2);border-radius:14px;padding:10px}
+.ficha-plan div{display:grid;gap:2px;text-align:center;min-width:0}
+.ficha-plan dt{font-size:.72rem;font-weight:700;color:var(--ink-2);line-height:1.2}
+.ficha-plan dd{margin:0;font-size:.86rem;font-weight:800;line-height:1.25}
+.plan.dest .ficha-plan{background:var(--cta-tint)}
+.no-trae{font-size:.88rem;color:var(--ink-2);line-height:1.45;margin-top:-4px}
+.plan{grid-template-rows:auto auto auto auto 1fr auto auto auto}
+.cmp tr.grupo td{font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--cta-osc);background:var(--surface-2)}
+.claro{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.claro-col{background:var(--card);border:2px solid var(--linea);border-radius:var(--r);padding:22px 20px;display:grid;gap:12px;align-content:start;min-width:0}
+.claro-col h3{display:flex;align-items:center;gap:10px;font-size:1.15rem}
+.claro-col h3 svg{width:26px;height:26px;padding:4px;border-radius:8px;background:var(--cta-tint);color:var(--cta-osc);flex:none}
+.claro-col.si h3 svg{background:var(--ok-tint);color:var(--ok)}
+.claro-col.no h3 svg{background:var(--surface-2);color:var(--no)}
+.claro-col ul{margin:0;padding-left:1.1em;display:grid;gap:8px;color:var(--ink-2);font-size:.97rem;line-height:1.45}
+@media (max-width:860px){.claro{grid-template-columns:1fr}}
+.desliza{display:none;font-size:.85rem;color:var(--ink-2);font-weight:700;margin-top:14px}
+@media (max-width:640px){.desliza{display:block}.cmp{min-width:520px}.cmp td:first-child,.cmp th:first-child{position:sticky;left:0;z-index:1;background:var(--card);min-width:150px;box-shadow:1px 0 0 var(--linea)}.cmp tr.grupo td:first-child{background:var(--surface-2)}}
 .comparar{margin-top:40px;text-align:center}
 .comparar summary{cursor:pointer;font-weight:800;list-style:none;display:inline-flex;align-items:center;gap:8px;color:var(--ink);padding:10px 18px;border:2px solid var(--linea);border-radius:999px;background:var(--card)}
 .comparar summary::-webkit-details-marker{display:none}
@@ -771,16 +789,22 @@ footer .logo{font-size:1.3rem}
     <div class="planes">
       <article class="plan">
         <h3>Esencial</h3>
-        <p class="para">Una invitación bonita y clara.</p>
+        <p class="para">Para informar con estilo: tus invitados ven todos los datos de la fiesta en un enlace bonito.</p>
         <div class="precio"><span class="antes">Valor <s>USD 130</s></span><div><b>$80</b><small>USD</small></div></div>
+        <dl class="ficha-plan">
+          <div><dt>Primera versión</dt><dd>5 días hábiles</dd></div>
+          <div><dt>Cambios</dt><dd>3 rondas</dd></div>
+          <div><dt>En línea</dt><dd>12 meses</dd></div>
+        </dl>
         <ul>
-          <li><svg><use href="#i-check"/></svg><span>Diseño con tus imágenes</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Fecha, hora, lugar y vestimenta</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Botón “Cómo llegar”</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Botón de WhatsApp</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Hasta 3 cambios</span></li>
-          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: mensaje para invitados</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Diseño a tu medida con tus fotos, colores y temática</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Fecha, hora, lugar y código de vestimenta</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Botón “Cómo llegar” que abre el mapa</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Botón para que te escriban por WhatsApp</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Un enlace propio para compartir</span></li>
+          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: texto listo para enviar a tus invitados</span></li>
         </ul>
+        <p class="no-trae">No trae música, confirmación de asistencia ni galería.</p>
         <div class="upsell"><svg><use href="#i-up"/></svg><span>Por <b>USD 70 más</b> tienes música, confirmación y galería.</span></div>
         <a class="btn btn-borde" data-wa="Hola, quiero reservar el plan Esencial (USD 80) para mi invitación." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Reservar Esencial</a>
       </article>
@@ -788,59 +812,128 @@ footer .logo{font-size:1.3rem}
       <article class="plan dest">
         <span class="cinta">El más elegido</span>
         <h3>Premium</h3>
-        <p class="para">La experiencia completa, como la de Sara.</p>
+        <p class="para">La experiencia completa: tus invitados confirman, te escriben y suben sus fotos.</p>
         <div class="precio"><span class="antes">Valor <s>USD 280</s></span><div><b>$150</b><small>USD</small></div></div>
+        <dl class="ficha-plan">
+          <div><dt>Primera versión</dt><dd>5 días hábiles</dd></div>
+          <div><dt>Cambios</dt><dd>5 rondas</dd></div>
+          <div><dt>En línea</dt><dd>12 meses</dd></div>
+        </dl>
         <ul>
           <li class="base"><svg><use href="#i-check"/></svg><span>Todo lo del Esencial, más:</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Música con tu canción</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Animaciones a medida</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Cuenta regresiva</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Confirmación de asistencia</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Muro de mensajes y galería</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Datos de regalo con botón copiar</span></li>
-          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: imagen para estados</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Música de fondo con la canción que elijas</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Animaciones y efectos según tu temática</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Cuenta regresiva hasta el día del evento</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Confirmación de asistencia: “Sí, voy” o “No puedo”</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Libro de firmas: tus invitados te dejan mensajes</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Galería donde suben sus fotos y videos</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Tus datos para regalos, con botón “Copiar”</span></li>
+          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: imagen de tu invitación para estados e Instagram</span></li>
         </ul>
-        <div class="upsell"><svg><use href="#i-up"/></svg><span>Por <b>USD 80 más</b> controlas a cada invitado.</span></div>
+        <p class="no-trae">Recibes la lista de quién confirmó, pero no un panel para gestionar pases.</p>
+        <div class="upsell"><svg><use href="#i-up"/></svg><span>Por <b>USD 80 más</b> controlas a cada invitado desde tu panel.</span></div>
         <a class="btn btn-cta" data-wa="Hola, quiero reservar el plan Premium (USD 150) para mi invitación." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Reservar Premium</a>
       </article>
 
       <article class="plan">
         <h3>Pack Total</h3>
-        <p class="para">Todo bajo control, hasta el último invitado.</p>
+        <p class="para">Para eventos grandes: sabes quién viene, con cuántos pases, en todo momento.</p>
         <div class="precio"><span class="antes">Valor <s>USD 510</s></span><div><b>$230</b><small>USD</small></div></div>
+        <dl class="ficha-plan">
+          <div><dt>Primera versión</dt><dd>5 días hábiles</dd></div>
+          <div><dt>Cambios</dt><dd>Sin límite hasta la entrega</dd></div>
+          <div><dt>En línea</dt><dd>12 meses</dd></div>
+        </dl>
         <ul>
           <li class="base"><svg><use href="#i-check"/></svg><span>Todo lo del Premium, más:</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Panel de invitados con clave</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Enlace personal con pases</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Conteo en tiempo real</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Descarga de fotos y mensajes</span></li>
-          <li><svg><use href="#i-check"/></svg><span>Resumen diario por correo</span></li>
-          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: QR para imprimir + todos los bonos</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Tu página privada (con clave) para ver quién confirmó</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Un enlace distinto para cada familia, con sus pases</span></li>
+          <li><svg><use href="#i-check"/></svg><span>El total de personas que van, al instante</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Descargas todas las fotos y mensajes en un archivo</span></li>
+          <li><svg><use href="#i-check"/></svg><span>Un correo diario con las nuevas confirmaciones</span></li>
+          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: código QR para imprimir en las mesas</span></li>
+          <li class="bono"><svg><use href="#i-gift"/></svg><span>Bono: texto para invitados e imagen para estados</span></li>
         </ul>
-        <div class="upsell"><svg><use href="#i-check"/></svg><span>Lo que usaron Sara y Valentín.</span></div>
+        <div class="upsell"><svg><use href="#i-check"/></svg><span>Es lo que usaron las familias de Sara y Valentín.</span></div>
         <a class="btn btn-borde" data-wa="Hola, quiero reservar el Pack Total (USD 230) para mi invitación." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Reservar Pack Total</a>
       </article>
     </div>
 
-    <details class="comparar">
+    <details class="comparar" open>
       <summary>Comparar planes</summary>
+      <p class="desliza">Desliza la tabla hacia el lado para ver los tres planes</p>
       <div class="cmp-wrap">
         <table class="cmp">
-          <thead><tr><th>Incluye</th><th>Esencial</th><th>Premium</th><th>Pack Total</th></tr></thead>
+          <thead><tr><th>Qué incluye</th><th>Esencial</th><th>Premium</th><th>Pack Total</th></tr></thead>
           <tbody>
-            <tr><td>Diseño con tus imágenes</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Datos, mapa y WhatsApp</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Música y animaciones</td><td class="no-inc">No</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Cuenta regresiva</td><td class="no-inc">No</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Confirmación de asistencia</td><td class="no-inc">No</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Muro de mensajes y galería</td><td class="no-inc">No</td><td class="si">✓</td><td class="si">✓</td></tr>
-            <tr><td>Panel de invitados y enlaces personales</td><td class="no-inc">No</td><td class="no-inc">No</td><td class="si">✓</td></tr>
-            <tr><td>Descargas y resumen por correo</td><td class="no-inc">No</td><td class="no-inc">No</td><td class="si">✓</td></tr>
+            <tr class="grupo"><td colspan="4">Condiciones</td></tr>
+            <tr><td>Precio (pago único)</td><td>USD 80</td><td>USD 150</td><td>USD 230</td></tr>
+            <tr><td>Primera versión lista</td><td>5 días hábiles</td><td>5 días hábiles</td><td>5 días hábiles</td></tr>
+            <tr><td>Rondas de cambios</td><td>3</td><td>5</td><td>Sin límite hasta la entrega</td></tr>
+            <tr><td>Tiempo en línea</td><td>12 meses</td><td>12 meses</td><td>12 meses</td></tr>
             <tr><td>Garantía de amor al primer diseño</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr class="grupo"><td colspan="4">Lo que ven tus invitados</td></tr>
+            <tr><td>Diseño a tu medida con tus fotos</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Fecha, hora, lugar y vestimenta</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Botón “Cómo llegar” y botón de WhatsApp</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Música de fondo</td><td class="no-inc">No</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Animaciones y cuenta regresiva</td><td class="no-inc">No</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Confirmación de asistencia</td><td class="no-inc">No</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Libro de firmas y galería de fotos</td><td class="no-inc">No</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Datos para regalos con botón “Copiar”</td><td class="no-inc">No</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Enlace personal por familia con sus pases</td><td class="no-inc">No</td><td class="no-inc">No</td><td class="si">✓</td></tr>
+            <tr class="grupo"><td colspan="4">Lo que recibes tú</td></tr>
+            <tr><td>Lista de quién confirmó</td><td class="no-inc">No</td><td>Por WhatsApp</td><td>En tu panel, en vivo</td></tr>
+            <tr><td>Página privada para gestionar invitados</td><td class="no-inc">No</td><td class="no-inc">No</td><td class="si">✓</td></tr>
+            <tr><td>Descarga de fotos y mensajes</td><td class="no-inc">No</td><td class="no-inc">No</td><td class="si">✓</td></tr>
+            <tr><td>Correo diario con confirmaciones</td><td class="no-inc">No</td><td class="no-inc">No</td><td class="si">✓</td></tr>
+            <tr><td>Texto listo para enviar a invitados</td><td class="si">✓</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Imagen para estados e Instagram</td><td class="no-inc">No</td><td class="si">✓</td><td class="si">✓</td></tr>
+            <tr><td>Código QR para imprimir</td><td class="no-inc">No</td><td class="no-inc">No</td><td class="si">✓</td></tr>
           </tbody>
         </table>
       </div>
     </details>
+  </div>
+</section>
+
+<section class="sec" id="claro" style="padding-top:0">
+  <div class="w">
+    <div class="sec-head centro">
+      <h2>Sin letra chica: esto es lo que pasa</h2>
+    </div>
+    <div class="claro">
+      <div class="claro-col">
+        <h3><svg><use href="#i-chat"/></svg>Tú nos envías</h3>
+        <ul>
+          <li>Nombre del festejado o de la pareja</li>
+          <li>Fecha, hora y dirección del evento</li>
+          <li>Tus fotos favoritas y la temática o colores</li>
+          <li>La canción que quieres (Premium y Pack Total)</li>
+          <li>Datos para regalos, si quieres mostrarlos</li>
+          <li>Tu lista de invitados con pases (Pack Total)</li>
+        </ul>
+      </div>
+      <div class="claro-col si">
+        <h3><svg><use href="#i-check"/></svg>Tú recibes</h3>
+        <ul>
+          <li>Un enlace web listo para mandar por WhatsApp</li>
+          <li>Una vista previa para revisar antes de enviarla</li>
+          <li>Los cambios de tu plan hasta que quede perfecta</li>
+          <li>La invitación en línea 12 meses desde el evento</li>
+          <li>Ayuda por WhatsApp si algo no funciona</li>
+        </ul>
+      </div>
+      <div class="claro-col no">
+        <h3><svg><use href="#i-x"/></svg>No incluye</h3>
+        <ul>
+          <li>Invitaciones impresas en papel</li>
+          <li>Enviar el enlace a cada invitado: lo envías tú</li>
+          <li>Personajes de películas con derechos de autor</li>
+          <li>Dominio propio (ej. tunombre.com): se cotiza aparte</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -851,10 +944,10 @@ footer .logo{font-size:1.3rem}
       <h2>Así de simple</h2>
     </div>
     <div class="ruta">
-      <div><h3>Nos escribes</h3><p>Tocas “Reservar” y se abre nuestro WhatsApp.</p></div>
-      <div><h3>Coordinamos el pago</h3><p>Te indicamos cómo pagar y apartamos tu fecha.</p></div>
+      <div><h3>Apartas tu fecha</h3><p>Nos escribes por WhatsApp y pagas el 50% del plan.</p></div>
       <div><h3>Mandas tus datos</h3><p>Fotos, fecha, lugar y canción. Te decimos qué enviar.</p></div>
-      <div><h3>La compartes</h3><p>Revisas, ajustamos y la envías a tus invitados.</p></div>
+      <div><h3>Revisas la primera versión</h3><p>En 5 días hábiles te mandamos el enlace de prueba y hacemos tus cambios.</p></div>
+      <div><h3>Pagas el resto y la envías</h3><p>Cuando la apruebas, pagas el otro 50% y la compartes con tus invitados.</p></div>
     </div>
   </div>
 </section>
@@ -865,13 +958,17 @@ footer .logo{font-size:1.3rem}
       <h2>Resolvemos tus dudas</h2>
     </div>
     <div class="faq">
-      <details><summary>¿Mis invitados tienen que descargar algo?</summary><p>No. Abren el enlace desde WhatsApp en cualquier celular.</p></details>
-      <details><summary>¿Funciona en iPhone y Android?</summary><p>Sí, en los dos. Incluso la subida de fotos y videos.</p></details>
+      <details><summary>¿Qué recibo exactamente?</summary><p>Un enlace web con tu invitación (o tu propio dominio, si lo contratas aparte). Lo pegas en WhatsApp y tus invitados la abren en su celular. Antes de enviarla te mostramos una vista previa.</p></details>
+      <details><summary>¿Cuándo y cuánto pago?</summary><p>Pagas el 50% para apartar tu fecha y el otro 50% cuando apruebas el diseño. Es un pago único, sin mensualidades.</p></details>
+      <details><summary>¿Cuánto se demora?</summary><p>Te enviamos la primera versión en 5 días hábiles desde que recibimos tus datos. Si tu evento está muy cerca, pregúntanos por la entrega express.</p></details>
+      <details><summary>¿Cuántos cambios puedo pedir?</summary><p>Esencial incluye 3 rondas de cambios, Premium 5 y Pack Total los que necesites hasta la entrega. Una ronda es una lista de ajustes que nos mandas de una vez.</p></details>
+      <details><summary>¿Cuánto tiempo queda en línea?</summary><p>12 meses desde la fecha de tu evento, para que tus invitados vuelvan a ver las fotos y mensajes.</p></details>
+      <details><summary>¿Cómo veo quién confirmó?</summary><p>En Premium te mandamos la lista por WhatsApp cuando la pidas. En Pack Total tienes tu página privada con cada familia, sus pases y el total de personas en vivo.</p></details>
+      <details><summary>¿Puede tener música?</summary><p>Sí, en Premium y Pack Total. Eliges la canción y suena al abrir la invitación. En iPhone, el invitado toca un botón para escucharla.</p></details>
+      <details><summary>¿Mis invitados tienen que descargar algo?</summary><p>No. Abren el enlace desde WhatsApp en cualquier celular, iPhone o Android.</p></details>
+      <details><summary>¿Y si cambia la fecha, la hora o el lugar?</summary><p>La actualizamos y el mismo enlace muestra el dato nuevo. No tienes que reenviar nada.</p></details>
       <details><summary>No sé de tecnología, ¿igual puedo?</summary><p>Sí. Tú nos mandas fotos y datos por WhatsApp; nosotros hacemos todo lo demás.</p></details>
-      <details><summary>¿Con cuánta anticipación la pido?</summary><p>Lo ideal es enviarla 4 a 6 semanas antes del evento. Escríbenos con tiempo para apartar tu fecha.</p></details>
-      <details><summary>¿Y si cambia la hora o el lugar?</summary><p>La actualizamos y el mismo enlace muestra el dato nuevo.</p></details>
       <details><summary>¿Puedo usar personajes de películas?</summary><p>Creamos personajes originales inspirados en tu temática, para que puedas compartirla sin problemas.</p></details>
-      <details><summary>¿Cómo pago?</summary><p>Por WhatsApp te indicamos los medios de pago disponibles.</p></details>
       <details><summary>¿Puedo subir de plan después?</summary><p>Sí, pagando solo la diferencia.</p></details>
     </div>
   </div>
